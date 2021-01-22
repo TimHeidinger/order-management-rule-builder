@@ -1,7 +1,7 @@
 
-<button mat-button [matMenuTriggerFor]="menu">Choose</button>
+<button mat-button [matMenuTriggerFor]="menu">Choose / {{option}}</button> <button (click)=exportlog()> Export </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>1 Day after creation</button>
-  <button mat-menu-item>2 Days after creation</button>
-  <button mat-menu-item>3 Days after creation</button>
+  <button mat-menu-item (click)="option='1 Day'">1 Day after creation</button>
+  <button mat-menu-item (click)="option='2 Day'">2 Days after creation</button>
+  <button mat-menu-item (click)="option='3 Day'">3 Days after creation</button>
 </mat-menu>

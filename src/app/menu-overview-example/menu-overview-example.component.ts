@@ -8,4 +8,12 @@ import {MatMenuModule} from '@angular/material/menu';
   selector: 'app-menu-overview-example',
   templateUrl: 'menu-overview-example.component.html',
 })
-export class MenuOverviewExampleComponent {}
+export class MenuOverviewExampleComponent {
+
+public option: string;
+
+exportlog() {
+  console.log(this.option);
+}
+
+}

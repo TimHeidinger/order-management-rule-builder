@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{option}}</button>
+
+      <button class="btn btn-outline-primary" (click)=exportlog()> Export </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="option='1 Day'; optionNumber=1">1 Day after creation</button>
+        <button ngbDropdownItem (click)="option='2 Days'; optionNumber=2">2 Days after creation</button>
+        <button ngbDropdownItem (click)="option='3 Days'; optionNumber=3">3 Days after creation</button>
+      </div>
+    </div>
+  </div>
+</div>

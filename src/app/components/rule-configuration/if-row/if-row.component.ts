@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-if-row-component',
-  templateUrl: './if-row-component.component.html',
-  styleUrls: ['./if-row-component.component.css']
+  selector: 'app-if-row',
+  templateUrl: './if-row.component.html',
+  styleUrls: ['./if-row.component.css']
 })
 export class IfRowComponentComponent implements OnInit {
 

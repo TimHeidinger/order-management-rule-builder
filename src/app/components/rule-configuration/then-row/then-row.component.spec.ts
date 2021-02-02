@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThenRowComponentComponent } from './then-row-component.component';
+import { ThenRowComponentComponent } from './then-row.component';
 
 describe('ThenRowComponentComponent', () => {
   let component: ThenRowComponentComponent;

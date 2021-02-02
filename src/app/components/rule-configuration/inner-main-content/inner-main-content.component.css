@@ -1,11 +1,6 @@
 :host {
-    background-color: white; 
-    size: 200px 200px;
-    display: block;
-    
-    text-align: center;
-
-    
-   
-   
+  background-color: white;
+  size: 200px 200px;
+  display: block;
+  text-align: center;
 }

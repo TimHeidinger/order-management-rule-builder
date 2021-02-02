@@ -1,4 +1,4 @@
-# AOE OMS - Rule Configuration
+# AOE OMS - Rule Builder
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 

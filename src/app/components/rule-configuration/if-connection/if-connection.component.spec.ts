@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IfConnectionComponentComponent } from './if-connection-component.component';
+import { IfConnectionComponentComponent } from './if-connection.component';
 
 describe('IfConnectionComponentComponent', () => {
   let component: IfConnectionComponentComponent;

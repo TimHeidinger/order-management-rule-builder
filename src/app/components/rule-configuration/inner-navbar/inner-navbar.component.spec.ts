@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InnerNavbarComponentComponent } from './inner-navbar-component.component';
+import { InnerNavbarComponentComponent } from './inner-navbar.component';
 
 describe('InnerNavbarComponentComponent', () => {
   let component: InnerNavbarComponentComponent;

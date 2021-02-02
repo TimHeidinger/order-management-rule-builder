@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-dropdown-basic',
   templateUrl: './dropdown-basic.component.html',
   styleUrls: ['./dropdown-basic.component.css']
-  
+
 })
 export class DropdownBasicComponent implements OnInit {
 
@@ -12,7 +12,7 @@ export class DropdownBasicComponent implements OnInit {
   public optionNumber: number;
 
   exportlog() {
-    
+
     console.log(this.optionNumber);
   }
 
@@ -21,13 +21,7 @@ export class DropdownBasicComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.option='choose';
+    this.option = 'choose';
   }
 
 }
-
-
-
-
-
-

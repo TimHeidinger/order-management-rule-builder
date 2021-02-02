@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IfRowComponentComponent } from './if-row-component.component';
+import { AddButtonComponentComponent } from './add-button.component';
 
-describe('IfRowComponentComponent', () => {
-  let component: IfRowComponentComponent;
-  let fixture: ComponentFixture<IfRowComponentComponent>;
+describe('AddButtonComponentComponent', () => {
+  let component: AddButtonComponentComponent;
+  let fixture: ComponentFixture<AddButtonComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IfRowComponentComponent ]
+      declarations: [ AddButtonComponentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IfRowComponentComponent);
+    fixture = TestBed.createComponent(AddButtonComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

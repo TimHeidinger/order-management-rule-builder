@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThenConnectionComponentComponent } from './then-connection-component.component';
+import { ThenConnectionComponentComponent } from './then-connection.component';
 
 describe('ThenConnectionComponentComponent', () => {
   let component: ThenConnectionComponentComponent;

@@ -1,11 +1,11 @@
 :host {
-    background-color: rgba(113,124,135,255); 
+    background-color: #6E7B87; 
     size: 200px 200px;
     display: block;
 }
 p {
     font-size: x-large;
     font-family: Arial;
-    color: rgb(248, 248, 244);
+    color: white;
     margin-left: 25px;
 }

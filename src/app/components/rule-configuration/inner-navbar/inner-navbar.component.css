@@ -2,10 +2,14 @@
     background-color: #6E7B87; 
     size: 200px 200px;
     display: block;
+    height: 120px;
+    margin-top: 60px;
 }
 p {
-    font-size: x-large;
+    font-size:35px;
     font-family: Arial;
     color: white;
-    margin-left: 25px;
+    margin-left: 50px;
+    padding-top: 50px;
+    font-weight: 530;
 }

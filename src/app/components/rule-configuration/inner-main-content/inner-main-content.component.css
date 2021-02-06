@@ -1,7 +1,29 @@
+.rule-name-container{
+  margin-left: 50px;
+}
+
+p{
+  font-size: 32px;
+  font-family: Arial;
+  font-weight: 400;
+  color: schwarz;
+  margin-top: 20px;
+}
+
+input {
+  font-size: 32px;
+  font-family: Arial;
+  font-weight: 350;
+  width: 700px;
+  box-sizing: border-box;
+  background-color: #e3e5e7;
+}
+
 .center {
   display: flex;
-  background-color: #fff;
-  margin: 2.5%;
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 20px;
   padding: 1.5%;
   justify-content: center;
   flex-direction: column;
@@ -15,19 +37,51 @@
 }
 
 .if-then-container {
-  margin-left: 10%;
+  margin-left: 20px;
   margin-right: 10%;
+  margin-top: 20px;
+  
 }
 
-/*.if-container,
+.if-container,
 .then-container {
-}*/
-
-.inner-if-container,
-.inner-then-container {
   padding-left: 1%;
 }
 
-.footer-button-container {
-  margin-left: 90%;
+.then-container{
+  margin-top: 30px;
 }
+
+h2{
+  color: #6E7B87;
+  font-family: Arial;
+}
+
+.footer-button-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.save-button, .cancel-button{
+  font-family: Arial;
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  border-radius:20px;
+  border: none;
+  width: 120px;
+  height: 45px;
+}
+
+.save-button{
+  margin-left: 50px;
+}
+
+.cancel-button{
+  margin-left: 1100px;
+}
+
+
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-add-button',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-button.component.css']
 })
 export class AddButtonComponentComponent implements OnInit {
+
+  // @Input() notification;
+  @Input()
+  public text: string;
+
 
   constructor() { }
 

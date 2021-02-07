@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AddButtonComponentComponent implements OnInit {
 
-  // @Input() notification;
+  // @Input() ;
   @Input()
   public text: string;
 

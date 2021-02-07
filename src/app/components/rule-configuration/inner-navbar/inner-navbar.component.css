@@ -1,15 +1,17 @@
-:host {
-    background-color: #6E7B87; 
-    size: 200px 200px;
-    display: block;
-    height: 120px;
-    margin-top: 60px;
+.inner-navbar {
+  background-color: #6e7b87;
+  display: block;
+
+  margin-top: 60px;
+  text-align: left;
+
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-p {
-    font-size:35px;
-    font-family: Arial;
-    color: white;
-    margin-left: 50px;
-    padding-top: 50px;
-    font-weight: 530;
+.inner-navbar h2 {
+  font-size: 35px;
+  font-family: Arial;
+  color: white;
+  font-weight: 530px;
+  padding-left: 2em;
 }

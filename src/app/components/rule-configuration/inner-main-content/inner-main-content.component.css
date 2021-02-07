@@ -69,6 +69,13 @@
   margin: 2em;
 }
 
+@media only screen and (max-width: 768px) {
+  .center-container{
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em 1em 1em 1em;
+  }
+}
+
 /*
  * if/then area, inside white box container
  */

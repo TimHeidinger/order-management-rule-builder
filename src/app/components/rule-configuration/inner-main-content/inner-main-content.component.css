@@ -1,87 +1,98 @@
-.rule-name-container{
-  margin-left: 50px;
+/*
+ * header container
+ */
+.rule-name-container {
+  margin-left: 3%;
+  flex-direction: column;
 }
 
-p{
-  font-size: 32px;
-  font-family: Arial;
-  font-weight: 400;
-  color: schwarz;
-  margin-top: 20px;
-}
+.rule-name-container input {
+  margin: 0.5em 0.5em 0em 0.5em;
+  padding: 0.1%;
+  width: 40%;
 
-input {
   font-size: 32px;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 350;
-  width: 700px;
+
+  background-color: #efefef;
   box-sizing: border-box;
-  background-color: #e3e5e7;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: grey;
 }
 
-.center {
+@media only screen and (max-width: 768px) {
+  .rule-name-container input {
+    float: center;
+  }
+}
+
+/*
+ * inner white box container
+ */
+.center-container {
   display: flex;
   background-color: white;
-  margin-left: 50px;
-  margin-top: 20px;
-  padding: 1.5%;
+  margin: 1.5em 3.5em 2.5em 3.5em;
+  padding: 2em 2em 2em 2em;
   justify-content: center;
   flex-direction: column;
   border-radius: 1em;
 }
 
-.shadow {
+.center-container .shadow {
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
 }
 
-.if-then-container {
-  margin-left: 20px;
-  margin-right: 10%;
-  margin-top: 20px;
-  
+.center-container hr {
+  margin: 2em;
 }
 
-.if-container,
-.then-container {
+/*
+ * if/then area, inside white box container
+ */
+.center-container h2 {
+  color: #6e7b87;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center-container .if-then-container {
+  float: left;
+}
+
+.center-container .if-container,
+.center-container .then-container {
   padding-left: 1%;
 }
 
-.then-container{
-  margin-top: 30px;
-}
-
-h2{
-  color: #6E7B87;
-  font-family: Arial;
-}
-
-.footer-button-container{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 150px;
-  margin-left: 80px;
-}
-
-.save-button, .cancel-button{
-  font-family: Arial;
+/*
+ * footer area, inside white box container
+ */
+.center-container .footer-button-container .save-button,
+.center-container .footer-button-container .cancel-button {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   background-color: orange;
   color: white;
-  border-radius:20px;
+
+  border-radius: 20px;
   border: none;
+
   width: 120px;
   height: 45px;
-}
 
-.save-button{
-  margin-left: 50px;
+  margin-right: 0.25em;
+  margin-top: 0.25em;
+  float: right;
 }
-
-.cancel-button{
-  margin-left: 1100px;
+@media only screen and (max-width: 768px) {
+  .center-container .footer-button-container .save-button,
+  .center-container .footer-button-container .cancel-button {
+    float: center;
+  }
 }
-
 
 

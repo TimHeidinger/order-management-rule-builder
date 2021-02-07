@@ -1,55 +1,30 @@
-:host {
-  font-family: Arial;
-  font-size: 18px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h6 {
-  margin: 8px 0;
-}
-
-p {
-  margin: 0;
-}
-
-.spacer {
-  flex: 1;
-}
-
 .toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
   display: flex;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+
+  height: 4em;
   background-color: #5d6874;
-  color: white;
-  font-weight: 600;
+  color: #fff;
+  font-weight: 550;
+  font-style: Helvetica, sans-serif;
 }
 
-.toolbar img {
+.toolbar-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.toolbar-line img {
   margin: 0 16px;
 }
 
-.content {
-  display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
-  flex-direction: column;
-  align-items: center;
-}
-
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
+@media only screen and (max-width: 768px) {
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

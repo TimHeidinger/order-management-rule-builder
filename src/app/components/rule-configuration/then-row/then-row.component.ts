@@ -81,8 +81,15 @@ public picker: NgxMaterialTimepickerComponent;
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
   
-    this.date = "Urgent Date";
     
+    
+
+    if(this.text==2){
+      this.date = "Urgent Date";
+    }
+    else{
+      this.date = "Due Date";
+    }
     
   }
 

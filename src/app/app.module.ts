@@ -14,6 +14,8 @@ import { ThenRowComponentComponent } from './components/rule-configuration/then-
 import { IfConnectionComponentComponent } from './components/rule-configuration/if-connection/if-connection.component';
 import { ThenConnectionComponentComponent } from './components/rule-configuration/then-connection/then-connection.component';
 import { AddButtonComponentComponent } from './components/rule-configuration/add-button/add-button.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { AddButtonComponentComponent } from './components/rule-configuration/add
     IfConnectionComponentComponent,
     ThenConnectionComponentComponent,
     AddButtonComponentComponent
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    NgbModule
-
+    NgbModule,
+    NgxMaterialTimepickerModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

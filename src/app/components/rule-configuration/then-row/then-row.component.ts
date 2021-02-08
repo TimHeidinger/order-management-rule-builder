@@ -1,5 +1,7 @@
-import { getLocaleDateFormat, getLocaleTimeFormat } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { getLocaleDateFormat, getLocaleTimeFormat, Time } from '@angular/common';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { NgxMaterialTimepickerComponent, NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
+import { isTemplateExpression } from 'typescript';
 
 @Component({
   
@@ -19,9 +21,24 @@ export class ThenRowComponentComponent implements OnInit {
   public opt: string;
   public optNumber: number;
   public offset: string;
-  public nu: number;
+  public ti: Time;
 
-  
+public picker: NgxMaterialTimepickerComponent;
+ darkTheme: NgxMaterialTimepickerTheme = {
+  container: {
+      bodyBackgroundColor: '#424242',
+      buttonColor: '#fff'
+  },
+  dial: {
+      dialBackgroundColor: '#555',
+  },
+  clockFace: {
+      clockFaceBackgroundColor: '#555',
+      clockHandColor: '#9fbd90',
+      clockFaceTimeInactiveColor: '#fff'
+  }
+};
+
   exportlog() {
 
     console.log(this.constructionNumber);
@@ -29,6 +46,7 @@ export class ThenRowComponentComponent implements OnInit {
     console.log(this.date);
     console.log(this.opt);
     console.log(this.offset);
+    
     
   }
 
@@ -42,13 +60,17 @@ export class ThenRowComponentComponent implements OnInit {
     this.offset = "offset";
     
   }
-
+  
+  
   reset(){
-    this.construction = 'Delete';
+    this.construction = 'Set';
     this.objekt = "Shipment Request";
     this.date = "Urgent Date";
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
+  
+    
     
   }
+
 }

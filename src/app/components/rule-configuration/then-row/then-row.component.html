@@ -7,7 +7,7 @@
 
     <div ngbDropdownMenu aria-labelledby="dropdownBas">     
     <button ngbDropdownItem (click)="construction='Set'; constructionNumber=1">Set</button>
-     <button ngbDropdownItem (click)="construction='Delete'; constructionNumber=2">Delete</button>
+     
     </div>
 
     <div ngbDropdown class="d-inline-block">
@@ -45,18 +45,18 @@
     <button ngbDropdownItem (click)="offset='1';">1 Day</button>
     <button ngbDropdownItem (click)="offset='2';">2 Day</button>
     <button ngbDropdownItem (click)="offset='3';">3 Day</button>
+
 </div>
 </div>
+</div>
 
-<div ngbDropdown class="d-inline-block">
-<label for="appt">at:</label>
-<input type="time" id="appt" name="appt">
+<input [ngxTimepicker] ="picker" placeholder="at" class ="clock"aria-label="at"   readonly>
+<ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
+<ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
+<ngx-material-timepicker #picker></ngx-material-timepicker>
+</div>
 
-    </div>
+<button (click)=reset()  type ="button" class="Delete-Button" ><b>x</b></button>
 
- 
+</div>
 
-    <button (click)=reset() type ="button" class="Delete-Button" ><b>x</b></button>
-
-   
-    

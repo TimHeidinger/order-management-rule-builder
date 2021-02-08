@@ -38,20 +38,20 @@ export class IfRowComponentComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.construction = 'Set';
-    this.objekt = "Shipment Request";
-    this.date = "Urgent Date";
-    this.opt = "OrderPlacedTime";
-    this.offset = "offset";
+    this.construction = 'Shipment Request';
+    this.objekt = "Attributes";
+    this.date = "Relation";
+    this.opt = "Choice";
+    
     
   }
 
   reset(){
-    this.construction = 'Delete';
-    this.objekt = "Shipment Request";
-    this.date = "Urgent Date";
-    this.opt = "OrderPlacedTime";
-    this.offset = "offset";
+    this.construction = 'Shipment Request';
+    this.objekt = "Attributes";
+    this.date = "Relation";
+    this.opt = "Choice";
+  
     
   }
 

@@ -1,4 +1,4 @@
-.Set-Button,.clock, .Andere-Button, .Offset-Button{
+.Set-Button, .Andere-Button, .Offset-Button{
   font-family: Arial;
   font-size: 18px;
   background-color: #e3e5e7;
@@ -32,5 +32,19 @@
   border: none;
   width: 40px;
   height: 40px;
-  margin-left: 150px;
+  margin-left: 50px;
+}
+
+.clock{
+  font-family: Arial;
+  font-size: 18px;
+  background-color: #e3e5e7;
+  color: #6E7B87;
+  border-radius:20px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 40px;
+  text-align: center;
+  width: 120px;
 }

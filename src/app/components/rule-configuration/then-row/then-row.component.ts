@@ -11,7 +11,10 @@ import { isTemplateExpression } from 'typescript';
 })
 
 export class ThenRowComponentComponent implements OnInit {
+ 
 
+  @Input()
+  public text: number;
   public construction: string;
   public constructionNumber: number;
   public objekt: string;
@@ -68,6 +71,7 @@ public picker: NgxMaterialTimepickerComponent;
     this.date = "Urgent Date";
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
+  
   
     
     

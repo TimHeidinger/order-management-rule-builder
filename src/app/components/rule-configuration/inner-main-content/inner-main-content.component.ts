@@ -9,6 +9,12 @@ export class InnerMainContentComponent implements OnInit {
   public text1: string = "CONDITION";
   public text2: string = "CONSEQUENCE";
 
+  public text3: number = 1;
+  public text4: number = 2;
+
+  public text5: number = 1;
+  public text6: number = 2;
+
   constructor() { }
 
   ngOnInit(): void {

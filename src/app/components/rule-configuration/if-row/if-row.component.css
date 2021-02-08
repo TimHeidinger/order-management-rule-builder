@@ -1,0 +1,33 @@
+ .Andere-Button, .relation-Button, .Choice-Button{
+    font-family: Arial;
+    font-size: 18px;
+    background-color: #e3e5e7;
+    color: #6E7B87;
+    border-radius:20px;
+    border: none;
+    margin-top: 20px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  .relation-Button{
+    width: 180px;
+  }
+  .Andere-Button{
+    width: 290px;
+  }
+  .Choice-Button{
+      width: 490px;
+  }
+ 
+  .Delete-Button{
+    font-family: Arial;
+    font-size: 20px;
+    background-color: #e00202;
+    color: white;
+    border-radius:100px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+  }

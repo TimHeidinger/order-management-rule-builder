@@ -11,16 +11,14 @@ export class IfRowComponentComponent implements OnInit {
   constructor() { }
 
 
-
+  @Input()
+  public text: number;
 
   public construction: string;
   public constructionNumber: number;
-  public objekt: string;
-  public objektNumber: number;
-  public date: string;
-  public dateNumber: number;
-  public opt: string;
-  public optNumber: number;
+  public attribute: string;
+  public relation: string;
+  public choice: string;
   public offset: string;
   public nu: number;
 
@@ -28,9 +26,8 @@ export class IfRowComponentComponent implements OnInit {
   exportlog() {
 
     console.log(this.constructionNumber);
-    console.log(this.objektNumber);
-    console.log(this.date);
-    console.log(this.opt);
+    console.log(this.relation);
+    console.log(this.choice);
     console.log(this.offset);
     
   }
@@ -39,18 +36,18 @@ export class IfRowComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.construction = 'Shipment Request';
-    this.objekt = "Attributes";
-    this.date = "Relation";
-    this.opt = "Choice";
+    this.attribute = "Attributes";
+    this.relation = "Relation";
+    this.choice = "Choice";
     
     
   }
 
   reset(){
     this.construction = 'Shipment Request';
-    this.objekt = "Attributes";
-    this.date = "Relation";
-    this.opt = "Choice";
+    this.attribute = "Attributes";
+    this.relation = "Relation";
+    this.choice = "Choice";
   
     
   }

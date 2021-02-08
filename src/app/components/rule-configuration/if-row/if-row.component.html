@@ -14,10 +14,15 @@
     <button class="Andere-Button"  id="dropdownBas2" ngbDropdownToggle>{{attribute}}</button>
 
     <div ngbDropdownMenu aria-labelledby="dropdownBas2">
-        <button ngbDropdownItem (click)="attribute='DELIVERY METHOD'">DELIVERY METHOD</button>
-        <button ngbDropdownItem (click)="attribute='CARRIER METHOD'">CARRIER METHOD</button>
+        <button ngbDropdownItem (click)="attribute='Delivery Method'">Delivery Method</button>
+        <button ngbDropdownItem  (click)="attribute='Carrier Method'">Carrier Method</button>
     </div>
  
+
+    <!-- 
+*ngIf="text==1"
+*ngIf="text==2"
+     -->
 </div>
 </div>
 
@@ -34,13 +39,15 @@
     <button class="Choice-Button"  id="dropdownBas4" ngbDropdownToggle>{{choice}}</button>
 
     <div ngbDropdownMenu aria-labelledby="dropdownBas4">
-        <button ngbDropdownItem (click)="choice='EXPRESS'">EXPRESS</button>
-        <button ngbDropdownItem (click)="choice='STANDARD'">STANDARD</button>
-        <button ngbDropdownItem (click)="choice='NO KNOWN CARRIER METHOD'">NO KNOWN CARRIER METHOD</button>
-        <button ngbDropdownItem (click)="choice='FLIGHT IS GIVEN AND AIRSIDE'">FLIGHT IS GIVEN AND AIRSIDE</button>
-        <button ngbDropdownItem (click)="choice='FLIGHT IS GIVEN AND LANDSIDE'">FLIGHT IS GIVEN AND LANDSIDE</button>
-        <button ngbDropdownItem (click)="choice='FLIGHT IS NOT GIVEN'">FLIGHT IS NOT GIVEN</button>
-    
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='EXPRESS'">EXPRESS</button>
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='STANDARD'">STANDARD</button>
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='NO KNOWN CARRIER METHOD'">NO KNOWN CARRIER METHOD</button>
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS GIVEN AND AIRSIDE'">FLIGHT IS GIVEN AND AIRSIDE</button>
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS GIVEN AND LANDSIDE'">FLIGHT IS GIVEN AND LANDSIDE</button>
+        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS NOT GIVEN'">FLIGHT IS NOT GIVEN</button>
+        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='HOME DELIVERY'">HOME DELIVERY</button>
+        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='INFLIGHT DELIVERY'">INFLIGHT DELIVERY</button>
+        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='COLLECTION POINT'">COLLECTION POINT</button>
 </div>
 </div>
 <div class="d-inline-block">

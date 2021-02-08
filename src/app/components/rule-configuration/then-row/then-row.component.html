@@ -24,8 +24,8 @@
                 <button class="Andere-Button" id="dropdownBas3" ngbDropdownToggle>{{date}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas3">
-                    <button ngbDropdownItem *ngIf="text = 1" (click)="date='Urgent Date'; dateNumber=1">Urgent Date</button>
-                    <button ngbDropdownItem (click)="date='Due Date'; dateNumber=2">Due Date</button>
+                    <button ngbDropdownItem *ngIf="text==2" (click)="date='Urgent Date'; dateNumber=1">Urgent Date</button>
+                    <button ngbDropdownItem *ngIf="text==1" (click)="date='Due Date'; dateNumber=2">Due Date</button>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
 
         <input [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
         <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
-        <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
-        <ngx-material-timepicker #picker></ngx-material-timepicker>
+        <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker> 
+        <ngx-material-timepicker #picker></ngx-material-timepicker> 
         <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>
     </div>

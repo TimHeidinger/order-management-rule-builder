@@ -58,21 +58,30 @@ public picker: NgxMaterialTimepickerComponent;
   ngOnInit(): void {
     this.construction = 'Set';
     this.objekt = "Shipment Request";
-    this.date = "Urgent Date";
+   
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
     
+    if(this.text==2){
+      this.date = "Urgent Date";
+    }
+    else{
+      this.date = "Due Date";
+    }
+
+  
+
   }
   
   
   reset(){
     this.construction = 'Set';
     this.objekt = "Shipment Request";
-    this.date = "Urgent Date";
+    
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
   
-  
+    this.date = "Urgent Date";
     
     
   }

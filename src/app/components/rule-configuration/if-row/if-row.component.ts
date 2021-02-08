@@ -36,19 +36,31 @@ export class IfRowComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.construction = 'Shipment Request';
-    this.attribute = "Attributes";
+    
     this.relation = "Relation";
     this.choice = "Choice";
     
+    if(this.text==1){
+      this.attribute = "Delivery Method";
+    }
+    else{
+      this.attribute = "Carrier Method";
+    }
     
   }
 
   reset(){
     this.construction = 'Shipment Request';
-    this.attribute = "Attributes";
+  
     this.relation = "Relation";
     this.choice = "Choice";
-  
+
+    if(this.text==1){
+      this.attribute = "Delivery Method";
+    }
+    else{
+      this.attribute = "Carrier Method";
+    }
     
   }
 

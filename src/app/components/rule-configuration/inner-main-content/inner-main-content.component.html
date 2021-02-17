@@ -1,47 +1,48 @@
-
-<div class="rule-name-container">
-    <div class="rule-name-container-line">
-        <input type="text" placeholder="Automation rule name" minlength = 1 maxlength = 20 required>
+<form>
+    <div class="rule-name-container">
+        <div class="rule-name-container-line">
+            <input type="text" placeholder="Enter a automation rule name" minlength=1 maxlength=20 required>
+        </div>
     </div>
-</div>
 
-<div class="center-container shadow">
+    <div class="center-container shadow">
 
-    <div class="if-then-container">
+        <div class="if-then-container">
 
-        <div class="if-container">
+            <div class="if-container">
 
-            <h2>IF</h2>
-            <div class="inner-if-container">
-                <app-if-row [text]="text3"></app-if-row>
-                <app-if-connection></app-if-connection>
-                <app-if-row [text]="text4"></app-if-row>
-                <app-add-button [text]="text1"></app-add-button>
+                <h2>IF</h2>
+                <div class="inner-if-container">
+                    <app-if-row [text]="text3"></app-if-row>
+                    <app-if-connection></app-if-connection>
+                    <app-if-row [text]="text4"></app-if-row>
+                    <app-add-button [text]="text1"></app-add-button>
+                </div>
+
             </div>
+
+            <hr>
+
+            <div class="then-container">
+
+                <h2>THEN</h2>
+                <div class="inner-then-container">
+                    <app-then-row [text]="text5"></app-then-row>
+                    <app-then-connection></app-then-connection>
+                    <app-then-row [text]="text6"></app-then-row>
+                    <app-add-button [text]="text2"></app-add-button>
+                </div>
+
+            </div>
+
+            <hr>
 
         </div>
 
-        <hr>
-
-        <div class="then-container">
-
-            <h2>THEN</h2>
-            <div class="inner-then-container">
-                <app-then-row [text]="text5"></app-then-row>
-                <app-then-connection></app-then-connection>
-                <app-then-row [text]="text6"></app-then-row>
-                <app-add-button [text]="text2"></app-add-button>
-            </div>
-
+        <div class="footer-button-container">
+            <button type="submit" id="save-button">Save</button>
+            <button type="reset" id="cancel-button">Cancel</button>
         </div>
 
-        <hr>
-
     </div>
-
-    <div class="footer-button-container">
-        <button class="save-button">Save</button>
-        <button class="cancel-button">Cancel</button>
-    </div>
-
-</div>
+</form>

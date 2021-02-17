@@ -1,57 +1,74 @@
 <div class="row">
     <div class="col">
-    <div ngbDropdown class="d-inline-block">
+        <div ngbDropdown class="d-inline-block">
 
-      
-    <button class="Andere-Button" id="dropdownBas" ngbDropdownToggle>{{construction}}</button>
 
-    <div ngbDropdownMenu aria-labelledby="dropdownBas">     
-    <button ngbDropdownItem (click)="construction='Shipment Request'; constructionNumber=1">Shipment Request</button>
-     
-    </div>
+            <button class="Andere-Button" id="dropdownBas" ngbDropdownToggle>{{construction}}</button>
 
-    <div ngbDropdown class="d-inline-block">
-    <button class="Andere-Button"  id="dropdownBas2" ngbDropdownToggle>{{attribute}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBas">
+                <button ngbDropdownItem (click)="construction='Shipment Request'; constructionNumber=1">Shipment
+                    Request</button>
 
-    <div ngbDropdownMenu aria-labelledby="dropdownBas2">
-        <button ngbDropdownItem (click)="attribute='Delivery Method'">Delivery Method</button>
-        <button ngbDropdownItem  (click)="attribute='Carrier Method'">Carrier Method</button>
-    </div>
- 
+            </div>
 
-    <!-- 
+            <div ngbDropdown class="d-inline-block">
+                <button class="Andere-Button" id="dropdownBas2" ngbDropdownToggle>{{attribute}}</button>
+
+                <div ngbDropdownMenu aria-labelledby="dropdownBas2">
+                    <button ngbDropdownItem (click)="attribute='Delivery Method'">Delivery Method</button>
+                    <button ngbDropdownItem (click)="attribute='Carrier Method'">Carrier Method</button>
+                </div>
+
+
+                <!-- 
 *ngIf="text==1"
 *ngIf="text==2"
      -->
-</div>
-</div>
+            </div>
+        </div>
 
-<div ngbDropdown class="d-inline-block">
-    <button class="relation-Button"  id="dropdownBas3" ngbDropdownToggle>{{relation}}</button>
+        <!--<div ngbDropdown class="d-inline-block">
+            <button class="relation-Button" id="dropdownBas3" ngbDropdownToggle>{{relation}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBas3">
+                <button ngbDropdownItem (click)="relation='EQUAL'">EQUAL</button>
+                <button ngbDropdownItem (click)="relation='NOT EQUAL'">NOT EQUAL</button>
+            </div>
+        </div>-->
+        <div ngbDropdown class="d-inline-block">
+            <select  id="dropdownBas3" required>
+                <option value=''>Relation</option>
+                <option value='EQUAL'>EQUAL</option>
+                <option value='EQUAL'>NOT EQUAL</option>
+            </select>
+        </div>
 
-    <div ngbDropdownMenu aria-labelledby="dropdownBas3">
-    <button ngbDropdownItem (click)="relation='EQUAL'">EQUAL</button>
-    <button ngbDropdownItem (click)="relation='NOT EQUAL'">NOT EQUAL</button>
+
+        <div ngbDropdown class="d-inline-block">
+            <button class="Choice-Button" id="dropdownBas4" ngbDropdownToggle>{{choice}}</button>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBas4">
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='EXPRESS'">EXPRESS</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
+                    (click)="choice='STANDARD'">STANDARD</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
+                    (click)="choice='NO KNOWN CARRIER METHOD'">NO KNOWN CARRIER METHOD</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
+                    (click)="choice='FLIGHT IS GIVEN AND AIRSIDE'">FLIGHT IS GIVEN AND AIRSIDE</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
+                    (click)="choice='FLIGHT IS GIVEN AND LANDSIDE'">FLIGHT IS GIVEN AND LANDSIDE</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
+                    (click)="choice='FLIGHT IS NOT GIVEN'">FLIGHT IS NOT GIVEN</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='HOME DELIVERY'">HOME
+                    DELIVERY</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'"
+                    (click)="choice='INFLIGHT DELIVERY'">INFLIGHT DELIVERY</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'"
+                    (click)="choice='COLLECTION POINT'">COLLECTION POINT</button>
+            </div>
+
+        </div>
+        <div class="d-inline-block">
+            <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>
+        </div>
     </div>
 </div>
-
-<div ngbDropdown class="d-inline-block">
-    <button class="Choice-Button"  id="dropdownBas4" ngbDropdownToggle>{{choice}}</button>
-
-    <div ngbDropdownMenu aria-labelledby="dropdownBas4">
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='EXPRESS'">EXPRESS</button>
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='STANDARD'">STANDARD</button>
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='NO KNOWN CARRIER METHOD'">NO KNOWN CARRIER METHOD</button>
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS GIVEN AND AIRSIDE'">FLIGHT IS GIVEN AND AIRSIDE</button>
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS GIVEN AND LANDSIDE'">FLIGHT IS GIVEN AND LANDSIDE</button>
-        <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS NOT GIVEN'">FLIGHT IS NOT GIVEN</button>
-        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='HOME DELIVERY'">HOME DELIVERY</button>
-        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='INFLIGHT DELIVERY'">INFLIGHT DELIVERY</button>
-        <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='COLLECTION POINT'">COLLECTION POINT</button>
-</div>
-</div>
-<div class="d-inline-block">
-    <button (click)=reset() type ="button" class="Delete-Button"><b>x</b></button>
-</div>
-   
-    

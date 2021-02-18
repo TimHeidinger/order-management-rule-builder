@@ -1,4 +1,15 @@
- .Andere-Button, #dropdownBas3, .Choice-Button{
+  select{
+    appearance: none
+  }
+ 
+  option{
+    font-size: smaller;
+    color: black;
+    border-color: #EEEEEE;
+    background-color: white;
+  }
+
+ .Shipment_Method_Button, #dropdownBas3, #dropdownBas4{
     font-family: Arial;
     font-size: 18px;
     background-color: #EEEEEE;
@@ -8,20 +19,22 @@
     margin-top: 1.563em;
     height: 40px;
     margin-left: 0.625em;
+    text-align: center;
   }
-  
-  #dropdownBas3{
-    width: 180px;
-    float: center;
-  }
-  .Andere-Button{
+
+  .Shipment_Method_Button{
     width: 290px;
   }
-  .Choice-Button{
+
+  #dropdownBas3{
+    width: 180px;
+  }
+  
+  #dropdownBas4{
     width: 490px;
   }
  
-  .Delete-Button{
+  #Delete-Button{
     font-family: Arial;
     font-size: 20px;
     background-color: #B81005;
@@ -32,3 +45,4 @@
     height: 40px;
     margin-left: 3.125em;
   }
+  

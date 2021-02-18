@@ -5,24 +5,28 @@
   option{
     font-size: smaller;
     color: black;
+    
     border-color: #EEEEEE;
     background-color: white;
   }
 
- .Shipment_Method_Button, #dropdownBas3, #dropdownBas4{
+  #dropdownBas, #dropdownBas2, #dropdownBas3, #dropdownBas4{
     font-family: Arial;
     font-size: 18px;
-    background-color: #EEEEEE;
     color:  #6E7B87;
+    text-align: center;
+
+    background-color: #EEEEEE;
     border-radius:20px;
     border: none;
+
     margin-top: 1.563em;
-    height: 40px;
     margin-left: 0.625em;
-    text-align: center;
+
+    height: 40px;
   }
 
-  .Shipment_Method_Button{
+  #dropdownBas, #dropdownBas2{
     width: 290px;
   }
 
@@ -37,12 +41,15 @@
   #Delete-Button{
     font-family: Arial;
     font-size: 20px;
-    background-color: #B81005;
     color: white;
+
+    background-color: #B81005;
     border-radius:100px;
     border: none;
+    
     width: 40px;
     height: 40px;
+
     margin-left: 3.125em;
   }
   

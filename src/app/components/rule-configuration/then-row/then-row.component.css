@@ -5,37 +5,41 @@ select{
 option{
   font-size: smaller;
   color: black;
+
   border-color: #EEEEEE;
   background-color: white;
 }
 
-.Set-Button, .Shipment_Date_Time_Button, #dropdownBas5{
+#dropdownBas, #dropdownBas2, #dropdownBas3, #dropdownBas4, #dropdownBas5{
   font-family: Arial;
   font-size: 18px;
-  background-color: #EEEEEE;
   color: #6E7B87;
+  text-align: center;
+
+  background-color: #EEEEEE;
   border-radius:20px;
   border: none;
-  margin-top: 1.563em,;
+
+  margin-top: 1.563em;
+  margin-left: 0.625em;
+
   height: 40px;
-  text-align: center;
 }
 
-.Set-Button{
+#dropdownBas{
   width: 140px;
 }
 
-.Shipment_Date_Time_Button{
+#dropdownBas2, #dropdownBas4{
   width: 290px;
 }
 
-#dropdownBas5{
-  width: 100px;
+#dropdownBas3{
+  width: 250px;
 }
 
-.d-inline-block{
-  margin-left: 0.625em;
-  font-size: 18px;
+#dropdownBas5{
+  width: 120px;
 }
 
 .clock{

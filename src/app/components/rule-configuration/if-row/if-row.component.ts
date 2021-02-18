@@ -56,7 +56,6 @@ export class IfRowComponentComponent implements OnInit {
     
   }
 
-
   
   exportlog() {
 

@@ -13,13 +13,9 @@
 
                 <h2>IF</h2>
                 <div class="inner-if-container">
-
                     <app-if-row [text]="text3" (ping)="update($event)"></app-if-row>
-
                     <app-if-connection></app-if-connection>
-
                     <app-if-row [text]="text4" (ping)="update($event)"></app-if-row>
-
                     <app-add-button [text]="text1"></app-add-button>
                 </div>
 
@@ -31,13 +27,9 @@
 
                 <h2>THEN</h2>
                 <div class="inner-then-container">
-
                     <app-then-row [text]="text5"></app-then-row>
-
                     <app-then-connection></app-then-connection>
-
                     <app-then-row [text]="text6"></app-then-row>
-
                     <app-add-button [text]="text2"></app-add-button>
                 </div>
 
@@ -49,7 +41,8 @@
 
         <div class="footer-button-container">
             <button type="submit" id="save-button" (click)=exportlog()>Save</button>
-            <button type="reset" id="cancel-button">Cancel</button>
+            <button type="button" id="cancel-button">Cancel</button>
+            <button type="reset" id="reset-button">Reset</button>
         </div>
 
     </div>

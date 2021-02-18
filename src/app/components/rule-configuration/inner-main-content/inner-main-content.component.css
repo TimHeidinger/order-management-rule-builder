@@ -102,8 +102,7 @@
 /*
  * footer area, inside white box container
  */
-.center-container .footer-button-container #save-button,
-.center-container .footer-button-container #cancel-button {
+#save-button, #cancel-button, #reset-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   background-color: #FE8C1D;
@@ -115,14 +114,17 @@
   width: 120px;
   height: 45px;
 
-  margin-right: 0.25em;
+  margin-right: 0.6em;
   margin-top: 0.25em;
   float: right;
 }
 
+#save-button{
+  margin-right: 1em;
+}
+
 @media only screen and (max-width: 768px) {
-  .center-container .footer-button-container #save-button,
-  .center-container .footer-button-container #cancel-button {
+  #save-button, #cancel-button, #reset-button {
     float: center;
   }
 }

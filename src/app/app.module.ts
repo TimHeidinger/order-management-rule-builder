@@ -19,6 +19,7 @@ import { InnerOverviewComponent } from './components/overview/inner-overview/inn
 import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -43,11 +44,12 @@ import { RouterModule } from '@angular/router';
     MatMenuModule,
     NgbModule,
     NgxMaterialTimepickerModule,
+    AppRoutingModule,
     //ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: InnerOverviewComponent },
-     { path: 'edit/', component: InnerMainContentComponent },
-    ]),
+    // RouterModule.forRoot([
+    //   { path: '', component: InnerOverviewComponent },
+    //  { path: 'edit/', component: InnerMainContentComponent },
+    // ]),
     
   ],
   providers: [],

@@ -6,8 +6,8 @@
         </select>
 
         <select id="dropdownBas2">
-            <option value="Delivery Method">Delivery Method ▾</option>
-            <option value="Carrier Method">Carrier Method ▾</option>
+            <option *ngIf="attribute=='Delivery Method'" value="Delivery Method">Delivery Method ▾</option>
+            <option *ngIf="attribute=='Carrier Method'" value="Carrier Method">Carrier Method ▾</option>
         </select>
 
         <select id="dropdownBas3" required>

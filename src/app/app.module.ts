@@ -18,7 +18,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { InnerOverviewComponent } from './components/overview/inner-overview/inner-overview.component';
 import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
 //import { ReactiveFormsModule } from '@angular/forms';
-//import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -44,10 +44,10 @@ import { InnerOverviewRowComponent } from './components/overview/inner-overview-
     NgbModule,
     NgxMaterialTimepickerModule,
     //ReactiveFormsModule,
-    // RouterModule.forRoot([
-    //   { path: '', component: InnerOverviewComponent },
-    //  { path: 'edit/', component: InnerMainContentComponent },
-    // ]),
+    RouterModule.forRoot([
+      { path: '', component: InnerOverviewComponent },
+     { path: 'edit/', component: InnerMainContentComponent },
+    ]),
     
   ],
   providers: [],

@@ -14,11 +14,11 @@
                 <h2>IF</h2>
                 <div class="inner-if-container">
 
-                    <app-if-row [text]="text3"></app-if-row>
+                    <app-if-row [text]="text3" (ping)="update($event)"></app-if-row>
 
                     <app-if-connection></app-if-connection>
 
-                    <app-if-row [text]="text4"></app-if-row>
+                    <app-if-row [text]="text4" (ping)="update($event)"></app-if-row>
 
                     <app-add-button [text]="text1"></app-add-button>
                 </div>

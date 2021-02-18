@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Rule } from "../../../_interface/rule";
+import { EventPing } from "../../../_interface/eventping";
 
 @Component({
   selector: 'app-inner-main-content',

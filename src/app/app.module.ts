@@ -15,6 +15,8 @@ import { IfConnectionComponentComponent } from './components/rule-configuration/
 import { ThenConnectionComponentComponent } from './components/rule-configuration/then-connection/then-connection.component';
 import { AddButtonComponentComponent } from './components/rule-configuration/add-button/add-button.component';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { InnerOverviewComponent } from './components/overview/inner-overview/inner-overview.component';
+import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     ThenRowComponentComponent,
     IfConnectionComponentComponent,
     ThenConnectionComponentComponent,
-    AddButtonComponentComponent
+    AddButtonComponentComponent,
+    InnerOverviewComponent,
+    InnerOverviewRowComponent
     
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { getLocaleDateFormat, getLocaleTimeFormat } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { EventPing } from 'src/app/_interface/eventping';
 
 @Component({
   selector: 'app-if-row',
@@ -14,6 +15,11 @@ export class IfRowComponentComponent implements OnInit {
   @Input()
   public text: number;
 
+
+  @Output() ping: EventEmitter<any> = new EventEmitter<any>();
+
+
+
   public construction: string;
   public constructionNumber: number;
   public attribute: string;
@@ -21,6 +27,35 @@ export class IfRowComponentComponent implements OnInit {
   public choice: string;
   public offset: string;
   public nu: number;
+
+
+  public teststring: string = "INT";
+
+
+
+  change1(s: string) {
+    const eventObject: EventPing = {
+      label: "1",
+      object: s
+  
+    };
+
+
+    this.ping.emit(eventObject);
+    
+  }
+
+
+  change2(s: string) {
+    const eventObject: EventPing = {
+      label: "2",
+      object: s
+  
+    };
+    this.ping.emit(eventObject);
+    
+  }
+
 
   
   exportlog() {

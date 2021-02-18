@@ -27,7 +27,20 @@ export class InnerMainContentComponent implements OnInit {
  public thenChoiceUrgentTime: Number = 2000;
 
 
+public update (event: EventPing): void{
+  //console.log(event);
 
+  if(event.label=="1"){
+  this.ifChoiceDelivery= event.object;
+  }
+
+  if(event.label=="2"){
+    this.ifChoiceCarrier= event.object;
+    }
+
+
+
+}
 
  exportlog() {
 

@@ -33,18 +33,20 @@
         <div ngbDropdown class="d-inline-block">
             <select id="dropdownBas4" required>
                 <option value=''>Choice ▼</option>
-                <option *ngIf="attribute=='Carrier Method'" value="EXPRESS">EXPRESS</option>
-                <option *ngIf="attribute=='Carrier Method'" value="STANDARD">STANDARD</option>
-                <option *ngIf="attribute=='Carrier Method'" value="NO KNOWN CARRIER METHOD">NO KNOWN CARRIER METHOD
+                <option *ngIf="attribute=='Carrier Method'" value="EXPRESS" (click)="change2('EXPRESS')">EXPRESS</option>
+                <option *ngIf="attribute=='Carrier Method'" value="STANDARD" (click)="change2('STANDARD')">STANDARD</option>
+                <option *ngIf="attribute=='Carrier Method'" value="NO KNOWN CARRIER METHOD" (click)="change2('NO KNOWN CARRIER METHOD')">NO KNOWN CARRIER METHOD
                 </option>
-                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS GIVEN AND AIRSIDE">FLIGHT IS GIVEN AND
+                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS GIVEN AND AIRSIDE" (click)="change2('FLIGHT IS GIVEN AND
+                AIRSIDE')">FLIGHT IS GIVEN AND
                     AIRSIDE</option>
-                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS GIVEN AND LANDSIDE">FLIGHT IS GIVEN AND
+                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS GIVEN AND LANDSIDE" (click)="change2('FLIGHT IS GIVEN AND
+                LANDSIDE')">FLIGHT IS GIVEN AND
                     LANDSIDE</option>
-                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS NOT GIVEN">FLIGHT IS NOT GIVEN</option>
-                <option *ngIf="attribute=='Delivery Method'" value="HOME DELIVERY">HOME DELIVERY</option>
-                <option *ngIf="attribute=='Delivery Method'" value="INFLIGHT DELIVERY">INFLIGHT DELIVERY</option>
-                <option *ngIf="attribute=='Delivery Method'" value="COLLECTION POINT">COLLECTION POINT</option>
+                <option *ngIf="attribute=='Carrier Method'" value="FLIGHT IS NOT GIVEN"(click)="change2('FLIGHT IS NOT GIVEN')"> FLIGHT IS NOT GIVEN</option>
+                <option *ngIf="attribute=='Delivery Method'" value="HOME DELIVERY" (click)="change1('HOME DELIVERY')">HOME DELIVERY</option>
+                <option *ngIf="attribute=='Delivery Method'" value="INFLIGHT DELIVERY" (click)="change1('INFLIGHT DELIVERY')">INFLIGHT DELIVERY</option>
+                <option *ngIf="attribute=='Delivery Method'" value="COLLECTION POINT" (click)="change1('COLLECTION POINT')">COLLECTION POINT</option>
             </select>
         </div>
 

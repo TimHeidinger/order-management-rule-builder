@@ -1,5 +1,6 @@
 import { getLocaleDateFormat, getLocaleTimeFormat, Time } from '@angular/common';
-import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { Component, Input, Output, NgModule, OnInit } from '@angular/core';
+import * as EventEmitter from 'events';
 import { NgxMaterialTimepickerComponent, NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
 import { isTemplateExpression } from 'typescript';
 

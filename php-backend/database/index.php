@@ -1,3 +1,2 @@
 <?php
-echo"AOE Rule Builder PHP Backend"
-?>
+echo ("AOE Rule Builder PHP Backend");

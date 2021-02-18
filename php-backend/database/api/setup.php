@@ -4,7 +4,7 @@ function createRuleTable()
 {
     require_once '../includes/connection.inc.php';
     $conn = getDatabaseConnection();
-    $result_data = $conn->query(
+    $conn->query(
         "CREATE TABLE IF NOT EXISTS aoe_rules (
     id SERIAL NOT NULL PRIMARY KEY,
     rule_name VARCHAR(100),
@@ -13,6 +13,6 @@ function createRuleTable()
     rule_deleted BOOLEAN,
     rule_data TEXT);"
     );
-    echo("Successfully created new table aoe_rules.");
+    echo ("Successfully created new table aoe_rules.");
 }
 createRuleTable();

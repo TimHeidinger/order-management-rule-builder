@@ -11,7 +11,7 @@
             </div>
 
             <div ngbDropdown class="d-inline-block">
-                <button class="Andere-Button" id="dropdownBas2" ngbDropdownToggle>{{objekt}}</button>
+                <button class="Shipment_Date_Time_Button" id="dropdownBas2" ngbDropdownToggle>{{objekt}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas2">
                     <button ngbDropdownItem (click)="objekt='Shipment Request'; objektNumber=1">Shipment
@@ -21,16 +21,18 @@
             </div>
 
             <div ngbDropdown class="d-inline-block">
-                <button class="Andere-Button" id="dropdownBas3" ngbDropdownToggle>{{date}}</button>
+                <button class="Shipment_Date_Time_Button" id="dropdownBas3" ngbDropdownToggle>{{date}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas3">
-                    <button ngbDropdownItem *ngIf="text==2" (click)="date='Urgent Date'; dateNumber=1">Urgent Date</button>
-                    <button ngbDropdownItem *ngIf="text==1" (click)="date='Due Date'; dateNumber=2">Due Date</button>
+                    <button ngbDropdownItem *ngIf="text==2" (click)="date='Urgent Date'; dateNumber=1">Urgent
+                        Date</button>
+                    <button ngbDropdownItem *ngIf="text==1" (click)="date='Due Date'; dateNumber=2">Due
+                        Date</button>
                 </div>
             </div>
 
             <div ngbDropdown class="d-inline-block">
-                <button class="Andere-Button" id="dropdownBas4" ngbDropdownToggle>{{opt}}</button>
+                <button class="Shipment_Date_Time_Button" id="dropdownBas4" ngbDropdownToggle>{{opt}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas4">
                     <button ngbDropdownItem (click)="opt='OrderPlacedTime'; optNumber=1">OrderPlacedTime</button>
@@ -38,28 +40,28 @@
                 </div>
             </div>
 
-
             <div ngbDropdown class="d-inline-block">
-                <button class="Offset-Button" id="dropdownBas5" ngbDropdownToggle>{{offset}}</button>
-
-                <div ngbDropdownMenu aria-labelledby="dropdownBas5">
-                    <button ngbDropdownItem (click)="offset='0 Day';">0 Day</button>
-                    <button ngbDropdownItem (click)="offset='1 Day';">1 Day</button>
-                    <button ngbDropdownItem (click)="offset='2 Days';">2 Days</button>
-                    <button ngbDropdownItem (click)="offset='3 Days';">3 Days</button>
-                    <button ngbDropdownItem (click)="offset='4 Days';">4 Days</button>
-                    <button ngbDropdownItem (click)="offset='5 Days';">5 Days</button>
-                    <button ngbDropdownItem (click)="offset='6 Days';">6 Days</button>
-                    <button ngbDropdownItem (click)="offset='7 Days';">7 Days</button>
-
-
-                </div>
+                <select id="dropdownBas5" required>
+                    <option value="">offset ▾</option>
+                    <option value="0 Day">0 Day</option>
+                    <option value="1 Day">1 Day</option>
+                    <option value="2 Day">2 Days</option>
+                    <option value="3 Day">3 Days</option>
+                    <option value="4 Day">4 Days</option>
+                    <option value="5 Day">5 Days</option>
+                    <option value="6 Day">6 Days</option>
+                    <option value="7 Day">7 Days</option>
+                </select>
             </div>
+
+
         </div>
 
         <input [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
         <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
-        <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker> 
-        <ngx-material-timepicker #picker></ngx-material-timepicker> 
-        <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>
+        <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
+        <ngx-material-timepicker #picker></ngx-material-timepicker>
+
+        <button type="reset" id="Delete-Button"><b>x</b></button>
+        <!--<button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>-->
     </div>

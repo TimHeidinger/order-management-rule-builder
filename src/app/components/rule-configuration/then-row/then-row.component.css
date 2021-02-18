@@ -1,50 +1,65 @@
-.Set-Button, .Andere-Button, .Offset-Button{
+select{
+  appearance: none;
+}
+
+option{
+  font-size: smaller;
+  color: black;
+  border-color: #EEEEEE;
+  background-color: white;
+}
+
+.Set-Button, .Shipment_Date_Time_Button, #dropdownBas5{
   font-family: Arial;
   font-size: 18px;
-  background-color: #e3e5e7;
+  background-color: #EEEEEE;
   color: #6E7B87;
   border-radius:20px;
   border: none;
-  margin-top: 20px;
+  margin-top: 1.563em,;
   height: 40px;
+  text-align: center;
 }
-
 
 .Set-Button{
   width: 140px;
 }
-.Offset-Button{
-  width: 100px;
-}
-.Andere-Button{
+
+.Shipment_Date_Time_Button{
   width: 290px;
 }
-.d-inline-block{
-  margin-left: 10px;
-  font-size: 18px;
+
+#dropdownBas5{
+  width: 100px;
 }
-.Delete-Button{
-  font-family: Arial;
-  font-size: 20px;
-  background-color: #e00202;
-  color: white;
-  border-radius:100px;
-  border: none;
-  width: 40px;
-  height: 40px;
-  margin-left: 50px;
+
+.d-inline-block{
+  margin-left: 0.625em;
+  font-size: 18px;
 }
 
 .clock{
   font-family: Arial;
   font-size: 18px;
-  background-color: #e3e5e7;
+  background-color: #EEEEEE;
   color: #6E7B87;
   border-radius:20px;
   border: none;
-  margin-top: 20px;
-  margin-left: 10px;
+  margin-top: 1.563em;
+  margin-left: 0.625em;
   height: 40px;
   text-align: center;
   width: 120px;
+}
+
+#Delete-Button{
+  font-family: Arial;
+  font-size: 20px;
+  background-color: #B81005;
+  color: white;
+  border-radius:100px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 3.125em;
 }

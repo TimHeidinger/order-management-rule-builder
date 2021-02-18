@@ -24,11 +24,17 @@
 
   font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #efefef;
+  
+
+  background-color: #EEEEEE;
   box-sizing: border-box;
   outline: 0;
   border-width: 0 0 2px;
-  border-color: grey;
+  border-color: #6E7B87;
+}
+
+::placeholder{
+  color:#6E7B87;
 }
 
 @media only screen and (max-width: 768px) {
@@ -80,7 +86,7 @@
  * if/then area, inside white box container
  */
 .center-container h2 {
-  color: #6e7b87;
+  color: #6E7B87;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -96,11 +102,11 @@
 /*
  * footer area, inside white box container
  */
-.center-container .footer-button-container .save-button,
-.center-container .footer-button-container .cancel-button {
+.center-container .footer-button-container #save-button,
+.center-container .footer-button-container #cancel-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
-  background-color: orange;
+  background-color: #FE8C1D;
   color: white;
 
   border-radius: 20px;
@@ -113,9 +119,10 @@
   margin-top: 0.25em;
   float: right;
 }
+
 @media only screen and (max-width: 768px) {
-  .center-container .footer-button-container .save-button,
-  .center-container .footer-button-container .cancel-button {
+  .center-container .footer-button-container #save-button,
+  .center-container .footer-button-container #cancel-button {
     float: center;
   }
 }

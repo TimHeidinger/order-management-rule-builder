@@ -1,20 +1,7 @@
-select{
-    appearance: none;
-  }
-  
-option{
-    font-size: smaller;
-    color: black;
-  
-    border-color: #EEEEEE;
-    background-color: white;
-}
-
-#And-button{
+.And-Button{
     font-family: Arial;
     font-size: 18px;
     color: white;
-    text-align: center;
 
     background-color: #6E7B87;
     border-radius:20px;

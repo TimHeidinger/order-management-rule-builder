@@ -39,12 +39,37 @@ export class InnerMainContentComponent implements OnInit {
   console.log(this.thenChoiceUrgent);
   console.log(this.thenChoiceUrgentTime);
 
+  var rule: any={};
+  
+  rule.ruleName = this.ruleName;
+  rule.ifChoicheDelivery=this.ifChoiceDelivery;
+  rule.ifChoicheCarrier=this.ifChoiceCarrier;
+  rule.thenChoiceDue=this.thenChoiceDue;
+  rule.thenChoiceDueTime=this.thenChoiceDueTime;
+  rule.thenChoiceUrgent=this.thenChoiceUrgent;
+  rule.thenChoiceUrgenTime=this.thenChoiceUrgentTime;
+  var jsonString = JSON.stringify(rule);
+  console.log(jsonString);
 }
 
 
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.jsonExp);
   }
 
+  jsonExp(){
+var rule: any={};
+rule.a = this.ruleName;
+rule.b=this.ifChoiceDelivery;
+rule.c=this.ifChoiceCarrier;
+rule.d=this.thenChoiceDue;
+rule.e=this.thenChoiceDueTime;
+rule.f=this.thenChoiceUrgent;
+rule.g=this.thenChoiceUrgentTime;
+var jsonString = JSON.stringify(rule);
+
+  }
 }

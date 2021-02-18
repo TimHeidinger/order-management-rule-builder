@@ -17,6 +17,8 @@ import { AddButtonComponentComponent } from './components/rule-configuration/add
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { InnerOverviewComponent } from './components/overview/inner-overview/inner-overview.component';
 import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -40,7 +42,12 @@ import { InnerOverviewRowComponent } from './components/overview/inner-overview-
     BrowserAnimationsModule,
     MatMenuModule,
     NgbModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    ReactiveFormsModule,
+    //RouterModule.forRoot([
+     // { path: '', component: InnerOverviewComponent },
+     // { path: 'edit/', component: InnerMainContentComponent },
+   // ]),
     
   ],
   providers: [],

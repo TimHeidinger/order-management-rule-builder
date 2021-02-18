@@ -25,6 +25,21 @@ export class InnerMainContentComponent implements OnInit {
  public thenChoiceUrgentTime: Number = 2000;
 
 
+
+
+ exportlog() {
+
+  console.log(this.ruleName);
+  console.log(this.ifChoiceDelivery);
+  console.log(this.ifChoiceCarrier);
+  console.log(this.thenChoiceDue);
+  console.log(this.thenChoiceDueTime);
+  console.log(this.thenChoiceUrgent);
+  console.log(this.thenChoiceUrgentTime);
+
+}
+
+
   constructor() { }
 
   ngOnInit(): void {

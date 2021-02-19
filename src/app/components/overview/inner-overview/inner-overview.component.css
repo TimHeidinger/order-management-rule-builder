@@ -1,0 +1,23 @@
+/*
+ * inner white box container
+ */
+ .center-container {
+    display: flex;
+    background-color: white;
+    margin: 1.5em 3.5em 2.5em 3.5em;
+    padding: 2em 2em 2em 2em;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1em;
+
+  }
+  
+  .center-container .shadow {
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+  }
+  
+  .center-container hr {
+    margin: 2em;
+  }

@@ -15,12 +15,15 @@ import { IfConnectionComponentComponent } from './components/rule-configuration/
 import { ThenConnectionComponentComponent } from './components/rule-configuration/then-connection/then-connection.component';
 import { AddButtonComponentComponent } from './components/rule-configuration/add-button/add-button.component';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
-import { InnerOverviewComponent } from './components/overview/inner-overview/inner-overview.component';
-import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
+import { InnerOverviewComponent, NgbdSortableHeader } from './components/overview/inner-overview/inner-overview.component';
+//import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
+//import { NgbdSortableHeader} from './components/overview/inner-overview/inner-overview.component';
+import { CommonModule } from '@angular/common';
+import { PopupComponent } from './components/overview/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,13 @@ import { AppRoutingModule } from './app-routing.module';
     ThenConnectionComponentComponent,
     AddButtonComponentComponent,
     InnerOverviewComponent,
-    InnerOverviewRowComponent
+    //InnerOverviewRowComponent,
+    
+    NgbdSortableHeader,
+    
+    PopupComponent
+    
+    
     
   ],
   imports: [
@@ -45,6 +54,7 @@ import { AppRoutingModule } from './app-routing.module';
     NgbModule,
     NgxMaterialTimepickerModule,
     AppRoutingModule,
+    CommonModule
     //ReactiveFormsModule,
     // RouterModule.forRoot([
     //   { path: '', component: InnerOverviewComponent },
@@ -52,7 +62,9 @@ import { AppRoutingModule } from './app-routing.module';
     // ]),
     
   ],
+  exports: [InnerOverviewComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,InnerOverviewComponent],
+  
 })
 export class AppModule { }

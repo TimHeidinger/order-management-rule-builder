@@ -23,7 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 //import { NgbdSortableHeader} from './components/overview/inner-overview/inner-overview.component';
 import { CommonModule } from '@angular/common';
-import { PopupComponent } from './components/overview/popup/popup.component';
+import { PopupComponent, PopupContent } from './components/overview/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { PopupComponent } from './components/overview/popup/popup.component';
     
     NgbdSortableHeader,
     
-    PopupComponent
+    PopupComponent,
+    PopupContent,
     
     
     

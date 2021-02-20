@@ -1,23 +1,29 @@
+<!--block of then_row-->
 <div class="row">
     <div class="col">
 
+        <!--First Drop down menu-->
         <select id="dropdownBas">
             <option value="Set">Set ▾</option>
         </select>
 
+        <!--Second Drop down menu-->
         <select id="dropdownBas2">
             <option value="Shipment Request">Shipment Request ▾</option>
         </select>
 
+        <!--Third Drop down menu-->
         <select id="dropdownBas3" required>
             <option *ngIf="text==2" value="Urgent Date">Urgent Date ▾</option>
             <option *ngIf="text==1" value="Due Date">Due Date ▾</option>
         </select>
 
+        <!--Forth Drop down menu-->
         <select id="dropdownBas4">
             <option value="OrderPlacedTime">OrderPlacedTime ▾</option>
         </select>
 
+        <!--Fifth Drop down menu-->
         <select id="dropdownBas5" required>
             <option value="">offset ▾</option>
             <option value="0 Day">0 Day ▾</option>
@@ -30,11 +36,13 @@
             <option value="7 Days">7 Days ▾</option>
         </select>
 
+        <!--Time picker-->
         <input [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
         <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
         <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
         <ngx-material-timepicker #picker></ngx-material-timepicker>
 
+        <!--reset button of every drop down menu in then_row-->
         <button type="button" id="Delete-Button"><b>x</b></button>
 
     </div>

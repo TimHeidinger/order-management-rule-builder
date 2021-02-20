@@ -1,21 +1,26 @@
+<!--block of if_row-->
 <div class="row">
     <div class="col">
 
+        <!--First Drop down menu-->
         <select id="dropdownBas">
             <option value="Shipment Request">Shipment Request ▾</option>
         </select>
 
+        <!--Second Drop down menu-->
         <select id="dropdownBas2">
             <option *ngIf="attribute=='Delivery Method'" value="Delivery Method">Delivery Method ▾</option>
             <option *ngIf="attribute=='Carrier Method'" value="Carrier Method">Carrier Method ▾</option>
         </select>
 
+        <!--Third Drop down menu-->
         <select id="dropdownBas3" required>
             <option value=''>Relation ▾</option>
             <option value='EQUAL'>EQUAL ▾</option>
             <option value='NOT EQUAL'>NOT EQUAL ▾</option>
         </select>
 
+        <!--Forth Drop down menu-->
         <select id="dropdownBas4" required>
             <option value=''>Choice ▾</option>
             <option *ngIf="attribute=='Carrier Method'" value="EXPRESS" (click)="change2('EXPRESS')">EXPRESS ▾</option>
@@ -40,6 +45,7 @@
                 COLLECTION POINT ▾</option>
         </select>
 
+        <!--reset button of every drop down menu in then_row-->
         <button type="button" id="Delete-Button"><b>x</b></button>
 
     </div>

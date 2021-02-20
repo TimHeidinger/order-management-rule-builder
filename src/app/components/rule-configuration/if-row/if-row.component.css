@@ -1,3 +1,6 @@
+  /*
+ * All drop dowm menus in if_row Styling
+ */
   select{
     appearance: none
   }
@@ -38,6 +41,9 @@
     width: 490px;
   }
  
+/*
+ * Delete Button Styling
+ */
   #Delete-Button{
     font-family: Arial;
     font-size: 20px;

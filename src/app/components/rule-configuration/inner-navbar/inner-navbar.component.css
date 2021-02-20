@@ -1,3 +1,7 @@
+/*
+ * Block with Title "Rule Configurator"
+ */
+
 .inner-navbar {
   display: flex;
   justify-content: left;
@@ -13,6 +17,10 @@
   align-items: center;
   padding-left: 2.5em;
 }
+
+/*
+ * Titel Styling
+ */
 .inner-navbar .inner-navbar-line h2 {
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;

@@ -1,3 +1,7 @@
+/*
+ * All drop dowm menus in then_row Styling
+ */
+
 select{
   appearance: none;
 }
@@ -42,6 +46,9 @@ option{
   width: 120px;
 }
 
+/*
+ * Time picker Styling
+ */
 .clock{
   font-family: Arial;
   font-size: 18px;
@@ -56,6 +63,9 @@ option{
   width: 120px;
 }
 
+/*
+ * Delete Button Styling
+ */
 #Delete-Button{
   font-family: Arial;
   font-size: 20px;

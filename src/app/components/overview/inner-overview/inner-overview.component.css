@@ -22,3 +22,11 @@
   margin: 2em;
 }
 
+th{
+  font-size: 20px;
+  color: #6E7B87;
+}
+th:hover{
+  color: #FE8C1D;
+}
+

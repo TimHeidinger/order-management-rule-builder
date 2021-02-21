@@ -2,7 +2,7 @@
 
 require_once '../includes/connection.inc.php';
 
-$id = $_GET['id'];
+$id = $_GET['rule_id'];
 
 $conn = getDatabaseConnection();
 if ($id != NULL) {

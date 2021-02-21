@@ -1,22 +1,27 @@
+
 <div class="center-container shadow">
 
 <table class="table table-striped">
 <thead>
     <tr>
-        <th scope="col">Nr.</th>
-        <th scope="col">Rule Name</th>
-        <th scope="col">Creation Date</th>
+        <th scope="col" sortable ="position" (sort)="onSort($event)">Nr.</th>
+        <th scope="col" sortable ="name" (sort)="onSort($event)">Rule Name</th>
+        <th scope="col" sortable ="dat" (sort)="onSort($event)">Creation Date</th>
         
     </tr>
 </thead>
 <tbody>
     
         <tr *ngFor="let element of rules; let i = index">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{element.name}}</td>, {{element.dat}}
+            <th scope="row">{{ element.position }}</th>
+           
+            <td>{{element.name }}</td> <td>{{element.dat| number}}</td>
+                
         </tr>
     
 </tbody>
 </table>
-<app-inner-overview-row></app-inner-overview-row>
+<!-- <app-popup></app-popup> -->
+<app-popup2></app-popup2>
+
 </div>

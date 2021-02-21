@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
 function getDatabaseConnection()
 {
     require_once '../includes/config.inc.php';

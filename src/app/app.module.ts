@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 //import { NgbdSortableHeader} from './components/overview/inner-overview/inner-overview.component';
 import { CommonModule } from '@angular/common';
 import { PopupComponent, PopupContent } from './components/overview/popup/popup.component';
+import { Popup2Component, Popup2Content } from './components/overview/popup2/popup2.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,8 @@ import { PopupComponent, PopupContent } from './components/overview/popup/popup.
     
     PopupComponent,
     PopupContent,
+    Popup2Component,
+    Popup2Content,
     
     
     

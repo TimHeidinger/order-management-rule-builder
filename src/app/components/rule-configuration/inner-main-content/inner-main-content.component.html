@@ -1,10 +1,8 @@
 <!--Main block unter Block with Titel "rule configurator-->
-<form>
-
     <!--Block with rule name-->
     <div class="rule-name-container">
         <div class="rule-name-container-line">
-            <input type="text" [(ngModel)]="datamessage" name="message" placeholder="automation rule name" minlength=1 maxlength=30 required>
+            <input type="text" [(ngModel)]="datamessage" name="message" placeholder="automation rule name" minlength=1 maxlength=30>
         </div>
     </div>
 
@@ -58,13 +56,10 @@
 
         </div>
 
-        <!--block with Button "rest", "cancel" and "save"-->
+        <!--block with Button "cancel" and "save"-->
         <div class="footer-button-container">
-            <button type="submit" id="save-button" (click)=exportlog2()>Save</button>
-            <button type="button" id="cancel-button">Cancel</button>
-            <button type="reset" id="reset-button">Reset</button>
+            <button class="save-button" (click)=exportlog2()>Save</button>
+            <button class="cancel-button">Cancel</button>
         </div>
-
     </div>
-   
-</form>
+

@@ -7,23 +7,29 @@
         <th scope="col" sortable ="position" (sort)="onSort($event)">Nr. ▾</th>
         <th scope="col" sortable ="name" (sort)="onSort($event)">Rule Name ▾</th>
         <th scope="col" sortable ="dat" (sort)="onSort($event)">Creation Date ▾</th>
+        <th scope="col" sortable ="dat" (sort)="onSort($event)"></th>
+
+
         
     </tr>
 </thead>
 <tbody>
-    
+
         <tr *ngFor="let element of rules; let i = index">
             <th scope="row">{{ element.position }}</th>
            
             <td>{{element.name }}</td> <td>{{element.dat| number}}</td>
+            <td>
+                <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button> 
+                <app-popup2></app-popup2>
+                <app-popup21></app-popup21>
+            </td>
+
                 
         </tr>
     
 </tbody>
 </table>
 <!-- <app-popup></app-popup> -->
-<app-popup2></app-popup2>
-<app-popup21></app-popup21>
-
 
 </div>

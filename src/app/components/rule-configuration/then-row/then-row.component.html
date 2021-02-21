@@ -1,52 +1,80 @@
 <!--block of then_row-->
 <div class="row">
     <div class="col">
+        <div ngbDropdown class="d-inline-block">
 
-        <!--First Drop down menu-->
-        <select id="dropdownBas">
-            <option value="Set">Set ▾</option>
-        </select>
 
-        <!--Second Drop down menu-->
-        <select id="dropdownBas2">
-            <option value="Shipment Request">Shipment Request ▾</option>
-        </select>
 
-        <!--Third Drop down menu-->
-        <select id="dropdownBas3" required>
-            <option *ngIf="text==2" value="Urgent Date">Urgent Date ▾</option>
-            <option *ngIf="text==1" value="Due Date">Due Date ▾</option>
-        </select>
 
-        <!--Forth Drop down menu-->
-        <select id="dropdownBas4">
-            <option value="OrderPlacedTime">OrderPlacedTime ▾</option>
-        </select>
 
-        <!--Fifth Drop down menu-->
-        <select id="dropdownBas5" required>
-            <option value="" >offset ▾</option>
-            <option value="0 Day" (click)="change21('0')">0 Day ▾</option>
-            <option value="1 Day" (click)="change21('1')">1 Day ▾</option>
-            <option value="2 Days" (click)="change21('2')">2 Days ▾</option>
-            <option value="3 Days" (click)="change21('3')">3 Days ▾</option>
-            <option value="4 Days" (click)="change21('4')">4 Days ▾</option>
-            <option value="5 Days" (click)="change21('5')">5 Days ▾</option>
-            <option value="6 Days" (click)="change21('6')">6 Days ▾</option>
-            <option value="7 Days" (click)="change21('7')">7 Days ▾</option>
-        </select>
+            <!--Drop down menu Set-->
+            <button class="Set-Button" id="dropdownBas" ngbDropdownToggle>{{construction}}</button>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBas">
+                <button ngbDropdownItem (click)="construction='Set'; constructionNumber=1">Set</button>
+
+            </div>
+
+            <!--Drop down menu Shipment-->
+            <div ngbDropdown class="d-inline-block">
+                <button class="Shipment-Button" id="dropdownBas2" ngbDropdownToggle>{{objekt}}</button>
+
+                <div ngbDropdownMenu aria-labelledby="dropdownBas2">
+                    <button ngbDropdownItem (click)="objekt='Shipment Request'; objektNumber=1">Shipment
+                        Request</button>
+
+                </div>
+            </div>
+
+            <!--Drop down menu Date-->
+            <div ngbDropdown class="d-inline-block">
+                <button class="Date-Button" id="dropdownBas3" ngbDropdownToggle>{{date}}</button>
+
+                <div ngbDropdownMenu aria-labelledby="dropdownBas3">
+                    <button ngbDropdownItem *ngIf="text==2" (click)="date='Urgent Date'; dateNumber=1">Urgent
+                        Date</button>
+                    <button ngbDropdownItem *ngIf="text==1" (click)="date='Due Date'; dateNumber=2">Due Date</button>
+                </div>
+            </div>
+
+            <!--Drop down menu PlacedTime-->
+            <div ngbDropdown class="d-inline-block">
+                <button class="PlacedTime-Button" id="dropdownBas4" ngbDropdownToggle>{{opt}}</button>
+
+                <div ngbDropdownMenu aria-labelledby="dropdownBas4">
+                    <button ngbDropdownItem (click)="opt='OrderPlacedTime'; optNumber=1">OrderPlacedTime</button>
+
+                </div>
+            </div>
+
+            <!--Drop down menu Offset-->
+            <div ngbDropdown class="d-inline-block">
+                <button class="Offset-Button" id="dropdownBas5" ngbDropdownToggle>{{offset}}</button>
+
+                <div ngbDropdownMenu aria-labelledby="dropdownBas5">
+                    <button ngbDropdownItem (click)="offset='0 Day';">0 Day</button>
+                    <button ngbDropdownItem (click)="offset='1 Day';">1 Day</button>
+                    <button ngbDropdownItem (click)="offset='2 Days';">2 Days</button>
+                    <button ngbDropdownItem (click)="offset='3 Days';">3 Days</button>
+                    <button ngbDropdownItem (click)="offset='4 Days';">4 Days</button>
+                    <button ngbDropdownItem (click)="offset='5 Days';">5 Days</button>
+                    <button ngbDropdownItem (click)="offset='6 Days';">6 Days</button>
+                    <button ngbDropdownItem (click)="offset='7 Days';">7 Days</button>
+
+
+                </div>
+            </div>
+        </div>
 
         <!--Time picker-->
-        <input *ngIf="text==1"  [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
-        <input *ngIf="text==2" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
-        <ngx-material-timepicker-toggle  class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
-        <!-- <ngx-material-timepicker-toggle *ngIf="text==1" class="d-inline-block" [for]="picker2"></ngx-material-timepicker-toggle> -->
+        <input *ngIf="text==2" [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock"
+            readonly>
+        <input *ngIf="text==1" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock"
+            readonly>
+        <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
         <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
-        <!-- <ngx-material-timepicker *ngIf="text==1" #picker2 [theme]="darkTheme"></ngx-material-timepicker> -->
-        <ngx-material-timepicker  #picker></ngx-material-timepicker>
-        <!-- <ngx-material-timepicker *ngIf="text==1" #picker2></ngx-material-timepicker> -->
+        <ngx-material-timepicker #picker></ngx-material-timepicker>
 
-        <!--reset button of every drop down menu in then_row-->
-        <button type="button" id="Delete-Button"><b>x</b></button>
-
+        <!--delete button-->
+        <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>
     </div>

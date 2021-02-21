@@ -5,16 +5,17 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-popup',
   template: `
     <div class="modal-header">
-      <h4 class="modal-title">Wollen Sie es wirklich Löschen?</h4>
-      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <h4 class="modal-title">Löschen</h4>
+      <button type="button" class="close" aria-label="Löschen" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      <p>Hello, {{name}}!</p>
+      <p>Wollen Sie wirklich löschen {{name}}</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Löschen</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Abbrechen</button>
     </div>
   `
 })
@@ -33,6 +34,6 @@ export class PopupComponent {
 
   open() {
     const modalRef = this.modalService.open(PopupContent);
-    modalRef.componentInstance.name = 'World';
+    modalRef.componentInstance.name = '?';
   }
 }

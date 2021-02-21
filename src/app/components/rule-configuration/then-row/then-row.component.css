@@ -2,19 +2,7 @@
  * All drop dowm menus in then_row Styling
  */
 
-select{
-  appearance: none;
-}
-
-option{
-  font-size: smaller;
-  color: black;
-
-  border-color: #EEEEEE;
-  background-color: white;
-}
-
-#dropdownBas, #dropdownBas2, #dropdownBas3, #dropdownBas4, #dropdownBas5{
+.Set-Button, .Shipment-Button, .Date-Button, .PlacedTime-Button, .Offset-Button{
   font-family: Arial;
   font-size: 18px;
   color: #6E7B87;
@@ -30,19 +18,19 @@ option{
   height: 40px;
 }
 
-#dropdownBas{
+.Set-Button{
   width: 140px;
 }
 
-#dropdownBas2, #dropdownBas4{
+.Shipment-Button, .PlacedTime-Button{
   width: 290px;
 }
 
-#dropdownBas3{
+.Date-Button{
   width: 250px;
 }
 
-#dropdownBas5{
+.Offset-Button{
   width: 120px;
 }
 
@@ -66,7 +54,7 @@ option{
 /*
  * Delete Button Styling
  */
-#Delete-Button{
+.Delete-Button{
   font-family: Arial;
   font-size: 20px;
   background-color: #B81005;

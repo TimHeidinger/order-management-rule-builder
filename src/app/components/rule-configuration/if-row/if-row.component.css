@@ -1,61 +1,40 @@
   /*
- * All drop dowm menus in if_row Styling
- */
-  select{
-    appearance: none
-  }
- 
-  option{
-    font-size: smaller;
-    color: black;
-    
-    border-color: #EEEEEE;
-    background-color: white;
-  }
-
-  #dropdownBas, #dropdownBas2, #dropdownBas3, #dropdownBas4{
+   * Dop-down-menus in if-row styling
+   */
+  .Shipment-Button, .Attribute-Button, .Relation-Button, .Choice-Button{
     font-family: Arial;
     font-size: 18px;
-    color:  #6E7B87;
+    color: #6E7B87;
     text-align: center;
-
+  
     background-color: #EEEEEE;
     border-radius:20px;
     border: none;
-
+  
     margin-top: 1.563em;
     margin-left: 0.625em;
-
+  
     height: 40px;
   }
-
-  #dropdownBas, #dropdownBas2{
-    width: 290px;
-  }
-
-  #dropdownBas3{
+  
+  .Relation-Button{
     width: 180px;
   }
-  
-  #dropdownBas4{
-    width: 490px;
+  .Shipment-Button, .Attribute-Button{
+    width: 290px;
+  }
+  .Choice-Button{
+      width: 490px;
   }
  
-/*
- * Delete Button Styling
- */
-  #Delete-Button{
+  .Delete-Button{
     font-family: Arial;
     font-size: 20px;
-    color: white;
-
     background-color: #B81005;
+    color: white;
     border-radius:100px;
     border: none;
-    
     width: 40px;
     height: 40px;
-
     margin-left: 3.125em;
   }
-  

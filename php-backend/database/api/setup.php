@@ -11,8 +11,8 @@ function createRuleTable()
     rule_initial_creation BIGINT,
     rule_last_updated BIGINT,
     rule_deleted BOOLEAN,
-    rule_data TEXT);"
+    rule_data JSON);"
     );
-    echo ("Successfully created new table aoe_rules.");
+    echo ("created new database table aoe_rules");
 }
 createRuleTable();

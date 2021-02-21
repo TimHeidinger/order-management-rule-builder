@@ -1,3 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
+import { RuleMetaData } from "./models/RuleMetaData";
+import { ShipmentRuleData } from './models/ShipmentRuleData';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
@@ -14,9 +17,11 @@ import { ThenRowComponentComponent } from './components/rule-configuration/then-
 import { IfConnectionComponentComponent } from './components/rule-configuration/if-connection/if-connection.component';
 import { ThenConnectionComponentComponent } from './components/rule-configuration/then-connection/then-connection.component';
 import { AddButtonComponentComponent } from './components/rule-configuration/add-button/add-button.component';
+
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { InnerOverviewComponent, NgbdSortableHeader } from './components/overview/inner-overview/inner-overview.component';
 //import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
+
 //import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +43,7 @@ import { PopupComponent, PopupContent } from './components/overview/popup/popup.
     ThenConnectionComponentComponent,
     AddButtonComponentComponent,
     InnerOverviewComponent,
+
     //InnerOverviewRowComponent,
     
     NgbdSortableHeader,
@@ -47,6 +53,7 @@ import { PopupComponent, PopupContent } from './components/overview/popup/popup.
     
     
     
+
   ],
   imports: [
     BrowserModule,
@@ -55,17 +62,23 @@ import { PopupComponent, PopupContent } from './components/overview/popup/popup.
     NgbModule,
     NgxMaterialTimepickerModule,
     AppRoutingModule,
-    CommonModule
+
+    CommonModule,
+
+    HttpClientModule,
+
     //ReactiveFormsModule,
     // RouterModule.forRoot([
     //   { path: '', component: InnerOverviewComponent },
     //  { path: 'edit/', component: InnerMainContentComponent },
     // ]),
-    
+
   ],
+
   exports: [InnerOverviewComponent],
-  providers: [],
+  providers: [RuleMetaData, ShipmentRuleData],
   bootstrap: [AppComponent,InnerOverviewComponent],
   
+
 })
 export class AppModule { }

@@ -1,3 +1,6 @@
+/*
+ * Connection Button Styling
+ */
 select{
     appearance: none;
   }
@@ -10,7 +13,7 @@ option{
     background-color: white;
 }
 
-#And-Button{
+#AND-DropDownButton{
     font-family: Arial;
     font-size: 18px;
     color: white;

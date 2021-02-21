@@ -1,7 +1,8 @@
 import { getLocaleDateFormat, getLocaleTimeFormat, Time } from '@angular/common';
-import { Component, Input, Output, NgModule, OnInit } from '@angular/core';
-import * as EventEmitter from 'events';
+import { Component, EventEmitter, Input, Output, NgModule, OnInit } from '@angular/core';
+//import * as EventEmitter from 'events';
 import { NgxMaterialTimepickerComponent, NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
+import { EventPing } from 'src/app/_interface/eventping';
 import { isTemplateExpression } from 'typescript';
 
 @Component({
@@ -16,6 +17,8 @@ export class ThenRowComponentComponent implements OnInit {
 
   @Input()
   public text: number;
+
+
   public construction: string;
   public constructionNumber: number;
   public objekt: string;
@@ -26,6 +29,14 @@ export class ThenRowComponentComponent implements OnInit {
   public optNumber: number;
   public offset: string;
   public ti: Time;
+
+  public datamessage: string;
+  public datamessage2: string;
+
+  public intervalId: any;
+
+
+  @Output() ping: EventEmitter<any> = new EventEmitter<any>();
 
 public picker: NgxMaterialTimepickerComponent;
  darkTheme: NgxMaterialTimepickerTheme = {
@@ -54,6 +65,21 @@ public picker: NgxMaterialTimepickerComponent;
     
   }
 
+
+
+  
+
+  change21(s: string) {
+    const eventObject: EventPing = {
+      label: "21",
+      object: s
+  
+    };
+
+    this.ping.emit(eventObject);
+    
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -71,6 +97,21 @@ public picker: NgxMaterialTimepickerComponent;
     }
 
   
+
+    this.intervalId = setInterval( () => { this.interval();}, 3000);
+
+
+  }
+
+  ngOnDestroy(){
+    clearInterval(this.intervalId);
+  }
+
+  public interval(){
+    console.log("www");
+    console.log(this.datamessage);
+    console.log(this.datamessage2);
+   // return null;
 
   }
   

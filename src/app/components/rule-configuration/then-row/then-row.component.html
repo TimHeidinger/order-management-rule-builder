@@ -28,7 +28,7 @@
             <option value="">offset ▾</option>
             <option value="0 Day">0 Day ▾</option>
             <option value="1 Day">1 Day ▾</option>
-            <option value="2 Days">2 Days ▾</option>
+            <option value="2 Days" (click)="change21('2')">2 Days ▾</option>
             <option value="3 Days">3 Days ▾</option>
             <option value="4 Days">4 Days ▾</option>
             <option value="5 Days">5 Days ▾</option>
@@ -37,10 +37,14 @@
         </select>
 
         <!--Time picker-->
-        <input [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
-        <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
+        <input *ngIf="text==2"  [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
+        <input *ngIf="text==1" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
+        <ngx-material-timepicker-toggle  class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
+        <!-- <ngx-material-timepicker-toggle *ngIf="text==1" class="d-inline-block" [for]="picker2"></ngx-material-timepicker-toggle> -->
         <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
-        <ngx-material-timepicker #picker></ngx-material-timepicker>
+        <!-- <ngx-material-timepicker *ngIf="text==1" #picker2 [theme]="darkTheme"></ngx-material-timepicker> -->
+        <ngx-material-timepicker  #picker></ngx-material-timepicker>
+        <!-- <ngx-material-timepicker *ngIf="text==1" #picker2></ngx-material-timepicker> -->
 
         <!--reset button of every drop down menu in then_row-->
         <button type="button" id="Delete-Button"><b>x</b></button>

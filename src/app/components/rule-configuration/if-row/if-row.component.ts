@@ -40,7 +40,6 @@ export class IfRowComponentComponent implements OnInit {
   
     };
 
-
     this.ping.emit(eventObject);
     
   }
@@ -55,6 +54,27 @@ export class IfRowComponentComponent implements OnInit {
     this.ping.emit(eventObject);
     
   }
+
+  change3(s: string) {
+    const eventObject: EventPing = {
+      label: "3",
+      object: s
+  
+    };
+    this.ping.emit(eventObject);
+    
+  }
+
+  change4(s: string) {
+    const eventObject: EventPing = {
+      label: "4",
+      object: s
+  
+    };
+    this.ping.emit(eventObject);
+    
+  }
+
 
   
   exportlog() {

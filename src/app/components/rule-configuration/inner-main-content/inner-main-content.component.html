@@ -4,7 +4,7 @@
     <!--Block with rule name-->
     <div class="rule-name-container">
         <div class="rule-name-container-line">
-            <input type="text" placeholder="automation rule name" minlength=1 maxlength=30 required>
+            <input type="text" [(ngModel)]="datamessage" name="message" placeholder="automation rule name" minlength=1 maxlength=30 required>
         </div>
     </div>
 
@@ -40,13 +40,13 @@
                 <div class="inner-then-container">
 
                     <!--First then_row-->
-                    <app-then-row [text]="text5"></app-then-row>
+                    <app-then-row [text]="text5"  (ping)="update($event)"></app-then-row>
 
                     <!--Button AND connects two then_rows-->
                     <app-then-connection></app-then-connection>
 
                     <!--Second then_row-->
-                    <app-then-row [text]="text6"></app-then-row>
+                    <app-then-row [text]="text6"  (ping)="update($event)"></app-then-row>
 
                      <!--Button for new then_row-->
                     <app-add-button [text]="text2"></app-add-button>

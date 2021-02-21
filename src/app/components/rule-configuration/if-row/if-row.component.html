@@ -16,14 +16,16 @@
         <!--Third Drop down menu-->
         <select id="dropdownBas3" required>
             <option value=''>Relation ▾</option>
-            <option value='EQUAL'>EQUAL ▾</option>
-            <option value='NOT EQUAL'>NOT EQUAL ▾</option>
+            <option *ngIf="attribute=='Delivery Method'" value='EQUAL' (click)="change3('EQUAL')">EQUAL ▾</option>
+            <option *ngIf="attribute=='Carrier Method'" value='EQUAL' (click)="change4('EQUAL')">EQUAL ▾</option>
+            <option *ngIf="attribute=='Delivery Method'" value='NOT EQUAL' (click)="change3('NOT EQUAL')">NOT EQUAL ▾</option>
+            <option *ngIf="attribute=='Carrier Method'" value='NOT EQUAL' (click)="change4('NOT EQUAL')">NOT EQUAL ▾</option>
         </select>
 
         <!--Forth Drop down menu-->
         <select id="dropdownBas4" required>
             <option value=''>Choice ▾</option>
-            <option *ngIf="attribute=='Carrier Method'" value="EXPRESS" (click)="change2('EXPRESS')">EXPRESS ▾</option>
+            <option *ngIf="attribute=='Carrier Method'" value="EXPRESS" (click)="change2('EXPRESS')"> EXPRESS ▾</option>
             <option *ngIf="attribute=='Carrier Method'" value="STANDARD" (click)="change2('STANDARD')">STANDARD ▾
             </option>
             <option *ngIf="attribute=='Carrier Method'" value="NO KNOWN CARRIER METHOD"
@@ -51,3 +53,5 @@
     </div>
 
 </div>
+
+<!-- <h1 (click)="change2('EXPRESS')">h</h1> -->

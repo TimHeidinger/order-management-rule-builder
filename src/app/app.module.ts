@@ -20,6 +20,7 @@ import { InnerOverviewRowComponent } from './components/overview/inner-overview-
 //import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AppRoutingModule } from './app-routing.module';
     NgbModule,
     NgxMaterialTimepickerModule,
     AppRoutingModule,
+    FormsModule,
     //ReactiveFormsModule,
     // RouterModule.forRoot([
     //   { path: '', component: InnerOverviewComponent },

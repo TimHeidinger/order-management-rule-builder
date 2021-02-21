@@ -11,7 +11,11 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
       </button>
     </div>
     <div class="modal-body">
-      <p>Wollen Sie wirklich löschen {{name}}</p> 
+      <p>Wollen Sie wirklich klonen {{name}}</p> 
+      
+      
+      <input class="form-control" id="ex2" type="text" placeholder="Enter name">
+    
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Continue</button>

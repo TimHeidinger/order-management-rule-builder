@@ -5,16 +5,14 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-popup20',
   template: `
     <div class="modal-header">
-      <h4 class="modal-title">Klonen</h4>
+      <h4 class="modal-title">Clone Rule</h4>
       <button type="button" class="close" aria-label="" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      <p>Wollen Sie wirklich klonen {{name}}</p> 
-      
-      
-      <input class="form-control" id="ex2" type="text" placeholder="Enter name">
+
+      <input class="form-control" id="ex2" type="text" placeholder="Enter a new rule name:">
     
     </div>
     <div class="modal-footer">

@@ -16,6 +16,69 @@ const RULES: Rule[]=[
     dat: 16
   },
   {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
+    position: 1,
+    name: 'a',
+    dat: 15
+  },{
+    position: 2,
+    name: 'xbps',
+    dat: 16
+  },
+  {
     position: 3,
     name: 'bps3',
     dat: 99

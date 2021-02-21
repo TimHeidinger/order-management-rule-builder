@@ -80,7 +80,8 @@ export class InnerMainContentComponent implements OnInit {
     exampleRuleMetaData.rule_last_udpated = currentTimeMillis;
     exampleRuleMetaData.rule_deleted = false;
     exampleRuleMetaData.rule_data = exampleShipmentRuleData.getJSON();
-    this.databaseService.insert(exampleRuleMetaData);
+    this.databaseService.insert(exampleRuleMetaData).subscribe(rules => {
+    });
 
     /*console.log(this.ruleName);
     console.log(this.ifChoiceDelivery);

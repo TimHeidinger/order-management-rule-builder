@@ -23,8 +23,8 @@ export class DatabaseBridge {
      * Insert new rule to database
      * @param ruleMetaData rule that should be inserted
      */
-    public insert(ruleMetaData: RuleMetaData){
-        this.http.post<String>(this.backendUrl + "/rule-add.php" +
+    public insert(ruleMetaData: RuleMetaData): Observable<String> {
+        return this.http.post<String>(this.backendUrl + "/rule-add.php" +
             "?rule_name=" + ruleMetaData.rule_name
             + "&rule_initial_creation=" + ruleMetaData.rule_initial_creation
             + "&rule_last_updated=" + ruleMetaData.rule_last_udpated

@@ -25,20 +25,20 @@
 
         <!--Fifth Drop down menu-->
         <select id="dropdownBas5" required>
-            <option value="">offset ▾</option>
-            <option value="0 Day">0 Day ▾</option>
-            <option value="1 Day">1 Day ▾</option>
+            <option value="" >offset ▾</option>
+            <option value="0 Day" (click)="change21('0')">0 Day ▾</option>
+            <option value="1 Day" (click)="change21('1')">1 Day ▾</option>
             <option value="2 Days" (click)="change21('2')">2 Days ▾</option>
-            <option value="3 Days">3 Days ▾</option>
-            <option value="4 Days">4 Days ▾</option>
-            <option value="5 Days">5 Days ▾</option>
-            <option value="6 Days">6 Days ▾</option>
-            <option value="7 Days">7 Days ▾</option>
+            <option value="3 Days" (click)="change21('3')">3 Days ▾</option>
+            <option value="4 Days" (click)="change21('4')">4 Days ▾</option>
+            <option value="5 Days" (click)="change21('5')">5 Days ▾</option>
+            <option value="6 Days" (click)="change21('6')">6 Days ▾</option>
+            <option value="7 Days" (click)="change21('7')">7 Days ▾</option>
         </select>
 
         <!--Time picker-->
-        <input *ngIf="text==2"  [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
-        <input *ngIf="text==1" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
+        <input *ngIf="text==1"  [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
+        <input *ngIf="text==2" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock" readonly>
         <ngx-material-timepicker-toggle  class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
         <!-- <ngx-material-timepicker-toggle *ngIf="text==1" class="d-inline-block" [for]="picker2"></ngx-material-timepicker-toggle> -->
         <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>

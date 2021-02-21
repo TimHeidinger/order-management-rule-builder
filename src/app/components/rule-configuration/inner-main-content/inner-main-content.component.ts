@@ -66,19 +66,19 @@ export class InnerMainContentComponent implements OnInit {
 
 
 
-        if(event.label=="6"){
+        if(event.label=="22"){
           this.thenChoiceDueTime= event.object;
           }
 
 
 
-          if(event.label=="7"){
+          if(event.label=="23"){
             this.thenChoiceUrgent= event.object;
             }
 
 
 
-            if(event.label=="8"){
+            if(event.label=="24"){
               this.thenChoiceUrgentTime= event.object;
               }
 

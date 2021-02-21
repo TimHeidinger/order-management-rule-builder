@@ -70,8 +70,34 @@ public picker: NgxMaterialTimepickerComponent;
   
 
   change21(s: string) {
+
+    var eventObject: EventPing;
+    if ( this.text == 1){
+      eventObject = {
+        label: "21",
+        object: s
+      };
+      
+    }
+
+    else{
+      eventObject  = {
+        label: "23",
+        object: s
+      };
+      
+    }
+  
+
+    this.ping.emit(eventObject);
+    
+  }
+
+
+
+  change22(s: string) {
     const eventObject: EventPing = {
-      label: "21",
+      label: "22",
       object: s
   
     };
@@ -79,6 +105,37 @@ public picker: NgxMaterialTimepickerComponent;
     this.ping.emit(eventObject);
     
   }
+
+
+
+  // change23(s: string) {
+  //   const eventObject: EventPing = {
+  //     label: "23",
+  //     object: s
+  
+  //   };
+
+  //   this.ping.emit(eventObject);
+    
+  // }
+
+
+
+
+  change24(s: string) {
+    const eventObject: EventPing = {
+      label: "24",
+      object: s
+  
+    };
+
+    this.ping.emit(eventObject);
+    
+  }
+
+
+
+
 
   constructor() { }
 
@@ -108,9 +165,27 @@ public picker: NgxMaterialTimepickerComponent;
   }
 
   public interval(){
-    console.log("www");
-    console.log(this.datamessage);
-    console.log(this.datamessage2);
+   // console.log("www");
+    
+    
+
+    if ( this.text == 1){
+
+      this.change22(this.datamessage);
+      //console.log(this.datamessage);
+    }
+
+    if ( this.text == 2){
+
+      this.change24(this.datamessage2);
+     // console.log(this.datamessage2);
+    }
+
+   
+
+
+
+
    // return null;
 
   }

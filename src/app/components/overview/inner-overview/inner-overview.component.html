@@ -7,7 +7,7 @@
         <th scope="col" sortable ="position" (sort)="onSort($event)">Nr. ▾</th>
         <th scope="col" sortable ="name" (sort)="onSort($event)">Rule Name ▾</th>
         <th scope="col" sortable ="dat" (sort)="onSort($event)">Creation Date ▾</th>
-        <th scope="col" sortable ="dat" (sort)="onSort($event)"></th>
+        <th scope="col" sortable ="act" ><button ><i class="fas fa-folder-plus"style="color: rgb(128, 128, 128);"data-toggle="tooltip" title="Create new Rule">Create</i></button></th>
 
 
         
@@ -20,9 +20,13 @@
            
             <td>{{element.name }}</td> <td>{{element.dat| number}}</td>
             <td>
-                <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button> 
+                <!-- <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button>  -->
+                <span style="font-size: 1.5rem;">
+                <button><i class="far fa-edit" style="color: rgb(128, 128, 128);"data-toggle="tooltip" title="Edit"></i> </button>
+                </span>
                 <app-popup2></app-popup2>
                 <app-popup21></app-popup21>
+ 
             </td>
 
                 

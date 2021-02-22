@@ -3,10 +3,6 @@
     <div class="col">
         <div ngbDropdown class="d-inline-block">
 
-
-
-
-
             <!--Drop down menu Set-->
             <button class="Set-Button" id="dropdownBas" ngbDropdownToggle>{{construction}}</button>
 
@@ -60,8 +56,6 @@
                     <button ngbDropdownItem (click)="offset='5 Days';change21('5')">5 Days</button>
                     <button ngbDropdownItem (click)="offset='6 Days';change21('6')">6 Days</button>
                     <button ngbDropdownItem (click)="offset='7 Days';change21('7')">7 Days</button>
-
-
                 </div>
             </div>
         </div>
@@ -78,5 +72,5 @@
 
 
         <!--delete button-->
-        <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>
+        <button (click)=reset(text) type="button" class="Delete-Button"><b>x</b></button>
     </div>

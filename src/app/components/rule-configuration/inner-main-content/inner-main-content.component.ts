@@ -30,25 +30,26 @@ export class InnerMainContentComponent implements OnInit {
   public datamessage: string;
 
 
- public ruleName: String ='testname';
- public ifChoiceDelivery: String ='home';
- public ifChoiceCarrier: String ='express';
- public ifRelation1: String ='equal';
- public ifRelation2: String ='equal';
- public thenChoiceDue: string = "5";
- public thenChoiceDueTime: string = "1500";
- public thenChoiceUrgent: string = "3";
- public thenChoiceUrgentTime: string = "2000";
+ public ruleName: String ='';
+ public ifChoice1: String ='';
+ public ifChoice2: String ='';
+ public ifRelation1: String ='';
+ public ifRelation2: String ='';
+ public ifConection: String ='';
+ public thenChoiceDue: string = "";
+ public thenChoiceDueTime: string = "";
+ public thenChoiceUrgent: string = "";
+ public thenChoiceUrgentTime: string = "";
 
   public update(event: EventPing): void {
     //console.log(event);
 
     if (event.label == "1") {
-      this.ifChoiceDelivery = event.object;
+      this.ifChoice1 = event.object;
     }
 
     if (event.label == "2") {
-      this.ifChoiceCarrier = event.object;
+      this.ifChoice2 = event.object;
     }
 
   if(event.label=="3"){
@@ -92,8 +93,8 @@ export class InnerMainContentComponent implements OnInit {
 
 
   console.log(this.ruleName);
-  console.log(this.ifChoiceDelivery);
-  console.log(this.ifChoiceCarrier);
+  console.log(this.ifChoice1);
+  console.log(this.ifChoice2);
   console.log(this.ifRelation1);
   console.log(this.ifRelation2);
   console.log(this.thenChoiceDue);
@@ -108,8 +109,8 @@ export class InnerMainContentComponent implements OnInit {
   var rule: any={};
   
   rule.ruleName = this.ruleName;
-  rule.ifChoicheDelivery=this.ifChoiceDelivery;
-  rule.ifChoicheCarrier=this.ifChoiceCarrier;
+  rule.ifChoicheDelivery=this.ifChoice1;
+  rule.ifChoicheCarrier=this.ifChoice2;
   rule.ifRelation1=this.ifRelation1;
   rule.ifRelation2=this.ifRelation2;
   //this.ifRelation
@@ -152,8 +153,8 @@ export class InnerMainContentComponent implements OnInit {
 
     // Insert rule into database
     let exampleShipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
-    exampleShipmentRuleData.ifChoiceCarrier = this.ifChoiceCarrier;
-    exampleShipmentRuleData.ifChoiceDelivery = this.ifChoiceDelivery;
+    exampleShipmentRuleData.ifChoiceCarrier = this.ifChoice1;
+    exampleShipmentRuleData.ifChoiceDelivery = this.ifChoice2;
     exampleShipmentRuleData.ifRelation1 = this.ifRelation1;
     exampleShipmentRuleData.ifRelation2 = this.ifRelation2;
     exampleShipmentRuleData.thenChoiceDue = this.thenChoiceDue;

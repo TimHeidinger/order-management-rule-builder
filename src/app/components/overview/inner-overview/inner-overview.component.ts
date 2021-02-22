@@ -1,6 +1,8 @@
 import { RuleMetaData } from './../../../models/RuleMetaData';
 import { Component, Directive, EventEmitter, Input, Output, QueryList, ViewChildren, OnInit } from '@angular/core';
 import { DatabaseBridge } from 'src/app/services/database.service';
+import { ResourceLoader } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 export type SortColumn = keyof RuleMetaData | '';
 export type SortDirection = 'asc' | 'desc' | '';
@@ -47,7 +49,16 @@ export class InnerOverviewComponent implements OnInit {
     console.log(t);
   }
 
-  constructor(private databaseService: DatabaseBridge) { }
+  refresh(){
+    
+      this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this._router.onSameUrlNavigation = 'reload';
+      this._router.navigate(['/']);
+  
+  }
+
+
+  constructor(private databaseService: DatabaseBridge, private _router: Router) { }
 
   ngOnInit(): void {
     // Fetch all available rules from database

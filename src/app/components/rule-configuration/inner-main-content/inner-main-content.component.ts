@@ -131,6 +131,10 @@ export class InnerMainContentComponent implements OnInit {
 
   exportlog() {
 
+
+    //get RuleName
+    this.ruleName=this.datamessage;
+
     // Fetch all available rules from database
     this.databaseService.getRules().subscribe(rules => {
       rules.forEach(x => {

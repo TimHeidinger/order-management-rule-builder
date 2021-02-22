@@ -82,8 +82,8 @@ import { Popup2Component, Popup2Content } from './components/overview/popup2/pop
 
   exports: [InnerOverviewComponent],
   providers: [RuleMetaData, ShipmentRuleData],
-  bootstrap: [AppComponent,InnerOverviewComponent],
-  
+  bootstrap: [AppComponent],
+  //InnerOverviewComponent
 
 })
 export class AppModule { }

@@ -207,10 +207,12 @@ public picker: NgxMaterialTimepickerComponent;
     
     if(i==1){
       this.change21('');
+      this.datamessage="";
     }
 
     if(i==2){
       this.change21('');
+      this.datamessage2="";
     }
   }
 

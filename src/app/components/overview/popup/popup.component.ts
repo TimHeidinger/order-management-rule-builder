@@ -1,6 +1,7 @@
 import { DatabaseBridge } from 'src/app/services/database.service';
 import { Component, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-popup',
@@ -15,7 +16,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
       <p>Do you really want to <strong><span class="text-danger">delete</span></strong> ID {{existingRuleID}}?</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="button" class="btn btn-danger" (click)="activeModal.close('Close click'); updateRule()">Delete</button>
+      <button type="button" class="button" class="btn btn-danger" (click)="activeModal.close('Close click'); updateRule(); this.refresh();">Delete</button>
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
     </div>
   `
@@ -24,7 +25,15 @@ export class PopupContent {
   
   @Input() existingRuleID;
 
-  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge) {}
+  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge, private _router: Router) {}
+
+  refresh(){
+    
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/']);
+
+}
 
   updateRule(){
     console.log(this.existingRuleID);

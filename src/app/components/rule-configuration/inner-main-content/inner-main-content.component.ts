@@ -86,6 +86,24 @@ export class InnerMainContentComponent implements OnInit {
 
 }
 
+check():boolean{
+ this.ruleName=this.datamessage;
+
+
+if(this.ruleName==""|| this.ifChoice1==""||this.ifChoice2=="" ||this.ifRelation1=="" ||this.ifRelation2==""||this.thenChoiceDue==""||
+this.thenChoiceDueTime==""||this.thenChoiceUrgent==""||this.thenChoiceUrgentTime==""){
+  
+  return false;}
+else {
+  return true;
+};
+  
+
+  
+}
+
+
+
  exportlog2() {
 
   this.ruleName=this.datamessage;
@@ -131,7 +149,7 @@ export class InnerMainContentComponent implements OnInit {
   // }
 
   exportlog() {
-
+if(this.check()){
 
     //get RuleName
     this.ruleName=this.datamessage;
@@ -192,7 +210,7 @@ export class InnerMainContentComponent implements OnInit {
     var jsonString = JSON.stringify(rule);
     console.log(jsonString);
     */
-
+  }
   }
   /*
     jsonExp() {

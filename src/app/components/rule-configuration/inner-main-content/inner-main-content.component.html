@@ -58,8 +58,12 @@
 
         <!--block with Button "cancel" and "save"-->
         <div class="footer-button-container">
-            <a routerLink="/"><button class="save-button" (click)=exportlog()>Save</button></a>
+            
+            <app-popup-save2 [boolean]=check() (click)=exportlog()></app-popup-save2>
             <a routerLink="/"><button class="cancel-button">Cancel</button></a>
+           
         </div>
+
+    
     </div>
 

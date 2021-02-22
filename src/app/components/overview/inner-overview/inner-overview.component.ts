@@ -68,7 +68,7 @@ export class InnerOverviewComponent implements OnInit {
       this.rules = rules.filter(x => !x.rule_deleted);
       this.rules.filter(x => !x.rule_deleted).forEach(x => {
         let date : Date = new Date(x.rule_initial_creation);
-        let dateHumanString : String = date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + ", " + date.getHours() + ":" + date.getMinutes();
+        let dateHumanString : String =  date.toDateString() + " at " + date.toLocaleTimeString();
         x.rule_initial_creation_human_date = dateHumanString;
       });
 

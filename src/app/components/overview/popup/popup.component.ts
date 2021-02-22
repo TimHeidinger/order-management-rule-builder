@@ -34,13 +34,13 @@ export class PopupContent {
 
           rules.forEach(x => {
     
-            // Create newly cloned rule
+            // Edit rule, set it to deleted
             let currentTimeMillis = +Date.now();
             x.rule_last_udpated = currentTimeMillis;
             x.rule_deleted = true;
             x.rule_data = JSON.stringify(x.rule_data);
     
-            // Insert newly created rule to database
+            // Update existing rule in database
             this.databaseService.update(x).subscribe(t => {
             });;
     

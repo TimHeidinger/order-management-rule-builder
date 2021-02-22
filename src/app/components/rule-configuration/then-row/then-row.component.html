@@ -52,14 +52,14 @@
                 <button class="Offset-Button" id="dropdownBas5" ngbDropdownToggle>{{offset}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas5">
-                    <button ngbDropdownItem (click)="offset='0 Day';">0 Day</button>
-                    <button ngbDropdownItem (click)="offset='1 Day';">1 Day</button>
-                    <button ngbDropdownItem (click)="offset='2 Days';">2 Days</button>
-                    <button ngbDropdownItem (click)="offset='3 Days';">3 Days</button>
-                    <button ngbDropdownItem (click)="offset='4 Days';">4 Days</button>
-                    <button ngbDropdownItem (click)="offset='5 Days';">5 Days</button>
-                    <button ngbDropdownItem (click)="offset='6 Days';">6 Days</button>
-                    <button ngbDropdownItem (click)="offset='7 Days';">7 Days</button>
+                    <button ngbDropdownItem (click)="offset='0 Day';change21('0')">0 Day</button>
+                    <button ngbDropdownItem (click)="offset='1 Day';change21('1')">1 Day</button>
+                    <button ngbDropdownItem (click)="offset='2 Days';change21('2')">2 Days</button>
+                    <button ngbDropdownItem (click)="offset='3 Days';change21('3')">3 Days</button>
+                    <button ngbDropdownItem (click)="offset='4 Days';change21('4')">4 Days</button>
+                    <button ngbDropdownItem (click)="offset='5 Days';change21('5')">5 Days</button>
+                    <button ngbDropdownItem (click)="offset='6 Days';change21('6')">6 Days</button>
+                    <button ngbDropdownItem (click)="offset='7 Days';change21('7')">7 Days</button>
 
 
                 </div>
@@ -67,13 +67,15 @@
         </div>
 
         <!--Time picker-->
-        <input *ngIf="text==2" [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock"
+        <input *ngIf="text==1" [(ngModel)]="datamessage" [ngxTimepicker]="picker" placeholder="at" class="clock"
             readonly>
-        <input *ngIf="text==1" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock"
+        <input *ngIf="text==2" [(ngModel)]="datamessage2" [ngxTimepicker]="picker" placeholder="at" class="clock"
             readonly>
         <ngx-material-timepicker-toggle class="d-inline-block" [for]="picker"></ngx-material-timepicker-toggle>
         <ngx-material-timepicker #picker [theme]="darkTheme"></ngx-material-timepicker>
-        <ngx-material-timepicker #picker></ngx-material-timepicker>
+        <!-- <ngx-material-timepicker #picker></ngx-material-timepicker> -->
+        <!-- <ngx-material-timepicker-toggle *ngIf="text==1" class="d-inline-block" [for]="picker2"></ngx-material-timepicker-toggle> -->
+
 
         <!--delete button-->
         <button (click)=reset() type="button" class="Delete-Button"><b>x</b></button>

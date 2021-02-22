@@ -8,7 +8,7 @@ The AOE Rule Builder offers customers the possibility to create and edit so-call
 
 Make sure that your aws enviroment settings `aws-deploy` in `package.json` is correct.
 
-The deployment process of the frontend components to AWS S3 can be started by typing `ng build && ng run aws-deploy`.
+The deployment process of the frontend components to AWS S3 can be started by typing `ng build && npm run aws-deploy`.
 
 ### PHP service
 

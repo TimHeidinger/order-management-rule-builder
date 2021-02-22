@@ -29,9 +29,11 @@ export class PopupContent {
 
   refresh(){
     
-    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this._router.onSameUrlNavigation = 'reload';
-    this._router.navigate(['/']);
+    setTimeout(() => {
+      this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this._router.onSameUrlNavigation = 'reload';
+      this._router.navigate(['/']);
+    }, 2000);
 
 }
 

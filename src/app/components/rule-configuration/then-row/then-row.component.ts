@@ -155,7 +155,7 @@ public picker: NgxMaterialTimepickerComponent;
 
   
 
-    this.intervalId = setInterval( () => { this.interval();}, 3000);
+    this.intervalId = setInterval( () => { this.interval();}, 1000);
 
 
   }

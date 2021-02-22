@@ -11,8 +11,8 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   </div>
   
   <div class="modal-footer">
-  <a routerLink="/"><button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Discard Rule</button></a>  
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Continue</button>
+ <p> Please fill in all fields</p>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">ok</button>
     
   </div>
 `,
@@ -38,8 +38,8 @@ export class PopupContentS {
   </div>
   
   <div class="modal-footer">
-  <a routerLink="/"><button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Discardddd Rule</button></a>  
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Continue</button>
+  <a routerLink="/"><button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Succesfully saved!</button></a>  
+ 
     
   </div>
 `,

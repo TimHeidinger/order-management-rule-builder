@@ -61,6 +61,17 @@ export class InnerMainContentComponent implements OnInit {
       this.ifRelation2= event.object;
       }
 
+
+      if(event.label=="5"){
+        this.ifConection= event.object;
+        }
+
+
+
+
+
+
+
       if(event.label=="21"){
         this.thenChoiceDue= event.object;
         }
@@ -171,10 +182,11 @@ if(this.check()){
 
     // Insert rule into database
     let exampleShipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
-    exampleShipmentRuleData.ifChoiceCarrier = this.ifChoice1;
-    exampleShipmentRuleData.ifChoiceDelivery = this.ifChoice2;
+    exampleShipmentRuleData.ifChoice1 = this.ifChoice1;
+    exampleShipmentRuleData.ifChoice2 = this.ifChoice2;
     exampleShipmentRuleData.ifRelation1 = this.ifRelation1;
     exampleShipmentRuleData.ifRelation2 = this.ifRelation2;
+    exampleShipmentRuleData.ifConection = this.ifConection;
     exampleShipmentRuleData.thenChoiceDue = this.thenChoiceDue;
     exampleShipmentRuleData.thenChoiceDueTime = this.thenChoiceDueTime;
     exampleShipmentRuleData.thenChoiceUrgend = this.thenChoiceUrgent;

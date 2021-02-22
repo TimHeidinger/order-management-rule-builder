@@ -6,10 +6,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ShipmentRuleData {
 
-    ifChoiceDelivery: String;
-    ifChoiceCarrier: String;
+    ifChoice1: String;
+    ifChoice2: String;
     ifRelation1: String;
     ifRelation2: String;
+    ifConection: String;
     thenChoiceDue: any; //TODO: Add type
     thenChoiceDueTime: any; //TODO: Add type
     thenChoiceUrgend: any; //TODO: Add type

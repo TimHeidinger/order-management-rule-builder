@@ -17,8 +17,8 @@
                 <button class="Attribute-Button" id="dropdownBas2" ngbDropdownToggle>{{attribute}}</button>
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBas2">
-                    <button ngbDropdownItem (click)="attribute='Delivery Method'">Delivery Method</button>
-                    <button ngbDropdownItem (click)="attribute='Carrier Method'">Carrier Method</button>
+                    <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="attribute='Delivery Method'">Delivery Method</button>
+                    <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"  (click)="attribute='Carrier Method'">Carrier Method</button>
                 </div>
 
             </div>

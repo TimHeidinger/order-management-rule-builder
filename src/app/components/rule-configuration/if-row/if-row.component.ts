@@ -24,6 +24,7 @@ export class IfRowComponentComponent implements OnInit {
   public constructionNumber: number;
   public attribute: string;
   public relation: string;
+  
   public choice: string;
   public offset: string;
   public nu: number;
@@ -68,6 +69,16 @@ export class IfRowComponentComponent implements OnInit {
   change4(s: string) {
     const eventObject: EventPing = {
       label: "4",
+      object: s
+  
+    };
+    this.ping.emit(eventObject);
+    
+  }
+
+  change5(s: string) {
+    const eventObject: EventPing = {
+      label: "5",
       object: s
   
     };

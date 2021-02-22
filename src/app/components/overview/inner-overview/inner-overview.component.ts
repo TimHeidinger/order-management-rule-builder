@@ -42,6 +42,11 @@ export class InnerOverviewComponent implements OnInit {
   
   rules: RuleMetaData[];
 
+
+  print(t: any){
+    console.log(t);
+  }
+
   constructor(private databaseService: DatabaseBridge) { }
 
   ngOnInit(): void {

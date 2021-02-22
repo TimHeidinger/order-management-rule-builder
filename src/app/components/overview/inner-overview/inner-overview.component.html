@@ -24,7 +24,8 @@
                                     title="Edit"></i> </button></a>
                     </span>
 
-                    <app-popup21></app-popup21>
+                    <app-popup21 [name2]=element.rule_id></app-popup21>
+                    <h3 (click)="print(element.rule_id)">test</h3>
                     <app-popup2></app-popup2>
                     <script>
     

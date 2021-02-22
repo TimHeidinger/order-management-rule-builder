@@ -11,10 +11,10 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
       </button>
     </div>
     <div class="modal-body">
-      <p>Do you really want to delete {{name}}</p>
+      <p>Do you really want to <strong><span class="text-danger">delete</span></strong> {{name}}</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Delete</button>
+      <button type="button" class="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Delete</button>
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
     </div>
   `

@@ -1,9 +1,5 @@
 import { RuleMetaData } from './../../../models/RuleMetaData';
 import { Component, Directive, EventEmitter, Input, Output, QueryList, ViewChildren, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PopupService } from '@ng-bootstrap/ng-bootstrap/util/popup';
-import { PopupComponent, PopupContent } from '../popup/popup.component';
-import { Popup2Component } from '../popup2/popup2.component';
 import { DatabaseBridge } from 'src/app/services/database.service';
 
 export type SortColumn = keyof RuleMetaData | '';
@@ -43,7 +39,7 @@ export class NgbdSortableHeader {
 })
 
 export class InnerOverviewComponent implements OnInit {
-
+  
   rules: RuleMetaData[];
 
   constructor(private databaseService: DatabaseBridge) { }
@@ -51,12 +47,21 @@ export class InnerOverviewComponent implements OnInit {
   ngOnInit(): void {
     // Fetch all available rules from database
     this.databaseService.getRules().subscribe(x => {
+
       this.rules = x;
+      this.rules.forEach(x => {
+        let date : Date = new Date(x.rule_initial_creation);
+        let dateHumanString : String = date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + ", " + date.getHours() + ":" + date.getMinutes();
+        x.rule_initial_creation_human_date = dateHumanString;
     });
+    });
+
   }
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   onSort({ column, direction }: SortEvent) {
+
+    console.log("sdasd");
 
     // resetting other headers
     this.headers.forEach(header => {
@@ -64,7 +69,6 @@ export class InnerOverviewComponent implements OnInit {
         header.direction = '';
       }
     });
-
 
     // sorting rules
     if (direction === '' || column === '') {

@@ -4,15 +4,15 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-popup-save',
   template: `
   <div class="modal-header">
-    <h4 class="modal-title">SaveCheck</h4>
+    <h4 class="modal-title">Please fill in all fields!</h4>
     <button type="button" class="close" aria-label="" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   
   <div class="modal-footer">
- <p> Please fill in all fields</p>
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">ok</button>
+
+  <button type="button" class="btn btn-primary" (click)="activeModal.close('Close click')">ok</button>
     
   </div>
 `,
@@ -31,14 +31,14 @@ export class PopupContentS {
   selector: 'app-popup-save20',
   template: `
   <div class="modal-header">
-    <h4 class="modal-title">SaveCheck</h4>
+    <h4 class="modal-title">Succesfully saved!</h4>
     <button type="button" class="close" aria-label="" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   
   <div class="modal-footer">
-  <a routerLink="/"><button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Succesfully saved!</button></a>  
+  <a routerLink="/"><button type="button" class="btn btn-primary" (click)="activeModal.close('Close click')">ok</button></a>  
  
     
   </div>

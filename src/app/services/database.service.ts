@@ -35,6 +35,20 @@ export class DatabaseBridge {
     }
 
     /**
+     * Update xisting rule in database
+     * @param ruleMetaData rule that should be updated
+     */
+    public update(ruleMetaData: RuleMetaData): Observable<String> {
+        return this.http.post<String>(this.backendUrl + "/rule-add.php" +
+            "?rule_id=" + ruleMetaData.rule_id
+            + "&rule_last_updated=" + ruleMetaData.rule_last_udpated
+            + "&rule_deleted=" + ruleMetaData.rule_deleted
+            + "&rule_data=" + ruleMetaData.rule_data,
+            ruleMetaData, httpOptions);
+        //return this.http.post<any>(this.backendUrl + '/rule-add.php', ruleMetaData, httpOptions);
+    }
+
+    /**
      * Fetch rule from database
      * @param rule_id of the searched rule
      */

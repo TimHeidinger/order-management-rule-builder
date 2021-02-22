@@ -1,27 +1,17 @@
 # AOE OMS - Rule Builder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+The AOE Rule Builder offers customers the possibility to create and edit so-called automation JSON rule sets. The generated automation rules can be further processed by the AOE Order Management System.
 
-## Development server
+## Build (Automatic deployment to AWS)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Angular service
 
-## Code scaffolding
+Make sure that your aws enviroment settings `aws-deploy` in `package.json` is correct.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The deployment process of the frontend components to AWS S3 can be started by typing `ng build && ng run aws-deploy`.
 
-## Build
+### PHP service
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The PHP backend files in `/php-backend` need to be manually deployed to your PHP server.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Afterwards make sure that the URL of your PHP server is correctly set in `/app/services/database.service.ts`. 

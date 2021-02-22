@@ -14,9 +14,6 @@ export class ShipmentRuleData {
     thenChoiceDueTime: any; //TODO: Add type
     thenChoiceUrgend: any; //TODO: Add type
     thenCoiceUrgendTime: any; //TODO: Add type
-  
-   
-
 
     /**
      * @returns JSON string of this instance

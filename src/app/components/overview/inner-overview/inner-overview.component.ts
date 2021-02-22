@@ -46,6 +46,11 @@ export class InnerOverviewComponent implements OnInit {
 
   rules: RuleMetaData[];
 
+
+  print(t: any){
+    console.log(t);
+  }
+
   constructor(private databaseService: DatabaseBridge) { }
 
   ngOnInit(): void {
@@ -66,15 +71,15 @@ export class InnerOverviewComponent implements OnInit {
     });
 
 
-    // sorting rules
-    if (direction === '' || column === '') {
-      this.rules = this.rules;
-    } else {
-      this.rules = [...this.rules].sort((a, b) => {
-        const res = compare(a.rule_name[column], b.rule_name[column]);
-        return direction === 'asc' ? res : -res;
-      });
-    }
+    // // sorting rules
+    // if (direction === '' || column === '') {
+    //   this.rules = this.rules;
+    // } else {
+    //   this.rules = [...this.rules].sort((a, b) => {
+    //     const res = compare(a[column], b[column]);
+    //     return direction === 'asc' ? res : -res;
+    //   });
+    // }
 
   }
 

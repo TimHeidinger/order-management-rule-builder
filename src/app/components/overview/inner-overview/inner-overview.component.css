@@ -23,25 +23,31 @@
 }
 
 th{
-  font-size: 20px;
+  font-size: 22px;
   color: #6E7B87;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 th:hover{
   color: #FE8C1D;
+}
+
+td{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .create-button{
   background-color: #5d6874; 
   color: white;
-  padding: 10px 30px;
+  padding: 5px 20px;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 .edit,.delete,.clone{
   background-color: transparent; 
   color:#5d6874;
-  
   border: none;
   
 }

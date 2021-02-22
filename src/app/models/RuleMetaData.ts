@@ -11,7 +11,7 @@ export class RuleMetaData {
     rule_id: number;
     rule_name: String;
     rule_initial_creation: number;
-    rule_last_udpated: number;
+    rule_last_updated: number;
     rule_deleted: boolean;
 
     // Rule data for calcuations as JSON string

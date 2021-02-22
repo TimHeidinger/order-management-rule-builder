@@ -53,7 +53,7 @@ export class Popup2Content {
         x.rule_name = this.cloneRuleName != null ? this.cloneRuleName : ("Clone of " + x.rule_name + " (" + x.rule_id + ")");
         let currentTimeMillis = +Date.now();
         x.rule_initial_creation = currentTimeMillis;
-        x.rule_last_udpated = currentTimeMillis;
+        x.rule_last_updated = currentTimeMillis;
         x.rule_data = JSON.stringify(x.rule_data);
 
         // Insert newly created rule to database

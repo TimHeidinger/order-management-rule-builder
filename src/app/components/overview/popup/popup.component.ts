@@ -36,7 +36,7 @@ export class PopupContent {
     
             // Edit rule, set it to deleted
             let currentTimeMillis = +Date.now();
-            x.rule_last_udpated = currentTimeMillis;
+            x.rule_last_updated = currentTimeMillis;
             x.rule_deleted = true;
             x.rule_data = JSON.stringify(x.rule_data);
     

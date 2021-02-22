@@ -27,7 +27,7 @@ export class DatabaseBridge {
         return this.http.post<String>(this.backendUrl + "/rule-add.php" +
             "?rule_name=" + ruleMetaData.rule_name
             + "&rule_initial_creation=" + ruleMetaData.rule_initial_creation
-            + "&rule_last_updated=" + ruleMetaData.rule_last_udpated
+            + "&rule_last_updated=" + ruleMetaData.rule_last_updated
             + "&rule_deleted=" + ruleMetaData.rule_deleted
             + "&rule_data=" + ruleMetaData.rule_data,
             ruleMetaData, httpOptions);
@@ -41,7 +41,7 @@ export class DatabaseBridge {
     public update(ruleMetaData: RuleMetaData): Observable<String> {
         return this.http.post<String>(this.backendUrl + "/rule-edit.php" +
             "?rule_id=" + ruleMetaData.rule_id
-            + "&rule_last_updated=" + ruleMetaData.rule_last_udpated
+            + "&rule_last_updated=" + ruleMetaData.rule_last_updated
             + "&rule_deleted=" + ruleMetaData.rule_deleted
             + "&rule_data=" + ruleMetaData.rule_data,
             ruleMetaData, httpOptions);

@@ -154,6 +154,9 @@ export class InnerMainContentComponent implements OnInit {
     let exampleShipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
     exampleShipmentRuleData.ifChoiceCarrier = this.ifChoiceCarrier;
     exampleShipmentRuleData.ifChoiceDelivery = this.ifChoiceDelivery;
+    exampleShipmentRuleData.ifRelation1 = this.ifRelation1;
+    exampleShipmentRuleData.ifRelation2 = this.ifRelation2;
+    exampleShipmentRuleData.thenChoiceDue = this.thenChoiceDue;
     exampleShipmentRuleData.thenChoiceDueTime = this.thenChoiceDueTime;
     exampleShipmentRuleData.thenChoiceUrgend = this.thenChoiceUrgent;
     exampleShipmentRuleData.thenCoiceUrgendTime = this.thenChoiceUrgentTime;

@@ -29,9 +29,11 @@
             <button class="Relation-Button" id="dropdownBas3" ngbDropdownToggle>{{relation}}</button>
 
             <div ngbDropdownMenu aria-labelledby="dropdownBas3">
-                <button ngbDropdownItem (click)="relation='EQUAL'; change3('EQUAL')">EQUAL</button>
-                <button ngbDropdownItem (click)="relation='NOT EQUAL'; change3('NOT EQUAL')">NOT
-                    EQUAL</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="relation='EQUAL'; change3('EQUAL')">EQUAL</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="relation='EQUAL'; change4('EQUAL')">EQUAL</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="relation='NOT EQUAL'; change3('NOT EQUAL')">NOT EQUAL</button>
+                <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="relation='NOT EQUAL'; change4('NOT EQUAL')">NOT EQUAL</button>
+                    
             </div>
         </div>
 
@@ -48,9 +50,9 @@
                 <button ngbDropdownItem *ngIf="attribute=='Carrier Method'"
                     (click)="choice='FLIGHT IS GIVEN AND LANDSIDE'; change2('FLIGHT IS GIVEN AND LANDSIDE')">FLIGHT IS GIVEN AND LANDSIDE</button>
                 <button ngbDropdownItem *ngIf="attribute=='Carrier Method'" (click)="choice='FLIGHT IS NOT GIVEN'; change2('FLIGHT IS NOT GIVEN')">FLIGHT IS NOT GIVEN</button>
-                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='HOME DELIVERY'; change2('FLIGHT IS NOT GIVEN')">HOME DELIVERY</button>
-                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='INFLIGHT DELIVERY'; change2('INFLIGHT DELIVERY')">INFLIGHT DELIVERY</button>
-                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='COLLECTION POINT'; change2('COLLECTION POINT')">COLLECTION POINT</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='HOME DELIVERY'; change1('HOME DELIVERY')">HOME DELIVERY</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='INFLIGHT DELIVERY'; change1('INFLIGHT DELIVERY')">INFLIGHT DELIVERY</button>
+                <button ngbDropdownItem *ngIf="attribute=='Delivery Method'" (click)="choice='COLLECTION POINT'; change1('COLLECTION POINT')">COLLECTION POINT</button>
             </div>
         </div>
 

@@ -31,7 +31,7 @@ export class PopupContentS {
   selector: 'app-popup-save20',
   template: `
   <div class="modal-header">
-    <h4 class="modal-title">Succesfully saved!</h4>
+    <h4 class="modal-title">Successfully saved!</h4>
     <button type="button" class="close" aria-label="" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>

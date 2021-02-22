@@ -1,4 +1,8 @@
 import { Component,Directive,EventEmitter, Input, Output,QueryList,ViewChildren, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PopupService } from '@ng-bootstrap/ng-bootstrap/util/popup';
+import { PopupComponent, PopupContent } from '../popup/popup.component';
+import { Popup2Component } from '../popup2/popup2.component';
 
 interface Rule {
   position: number;
@@ -132,7 +136,7 @@ export class InnerOverviewComponent implements OnInit {
     }
   });
 
-  // sorting countries
+  // sorting rules
   if (direction === '' || column === '') {
     this.rules = RULES;
   } else {
@@ -141,6 +145,10 @@ export class InnerOverviewComponent implements OnInit {
       return direction === 'asc' ? res : -res;
     });
   }
+}
+open() {
+  open();
+  
 }
 
 

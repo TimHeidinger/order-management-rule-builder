@@ -6,8 +6,8 @@
     <tr>
         <th scope="col" sortable ="position" (sort)="onSort($event)">Nr. ▾</th>
         <th scope="col" sortable ="name" (sort)="onSort($event)">Rule Name ▾</th>
-        <th scope="col" sortable ="dat" (sort)="onSort($event)">Creation Date ▾</th>
-        <th scope="col" sortable ="act" ><button class="create-button"data-toggle="tooltip" title="Create new Rule"><i class="fas fa-folder-plus">Create</i></button></th>
+        <th scope="col" sortable ="dat" (sort)="onSort($event)">  Creation Date ▾</th>
+        <th scope="col" sortable ="act" ><a routerLink="/edit"><button class="create-button"data-toggle="tooltip" title="Create new Rule"><i class="fas fa-folder-plus"> Create</i></button></a></th>
 
 
         
@@ -22,16 +22,14 @@
             <td>
                 <!-- <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button>  -->
                 <span style="font-size: 1.5rem;">
-                <button class="edit"><i class="far fa-edit" data-toggle="tooltip" title="Edit"></i> </button>
+                <a routerLink="/edit"><button class="edit"><i class="far fa-edit" data-toggle="tooltip" title="Edit"></i> </button></a>
                 </span>
                
-                <span style="font-size: 1.5rem;">
-                <button class="clone"><i class="fas fa-clone" data-toggle="tooltip" title="Clone"></i> </button>
-                </span>
+                <app-popup21 ></app-popup21>
                 
-                <span style="font-size: 1.5rem;">
-                <button class="delete"><i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i> </button>
-                </span>
+                
+                 <app-popup2></app-popup2>
+
  
  
             </td>
@@ -43,5 +41,6 @@
 </table>
 <!-- <app-popup></app-popup> -->
 
-<app-popup2></app-popup2>
-<app-popup21></app-popup21>
+
+
+    

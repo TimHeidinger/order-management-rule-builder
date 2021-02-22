@@ -6,7 +6,7 @@ function createRuleTable()
     $conn = getDatabaseConnection();
     $conn->query(
         "CREATE TABLE IF NOT EXISTS aoe_rules (
-    id SERIAL NOT NULL PRIMARY KEY,
+    rule_id SERIAL NOT NULL PRIMARY KEY,
     rule_name VARCHAR(100),
     rule_initial_creation BIGINT,
     rule_last_updated BIGINT,

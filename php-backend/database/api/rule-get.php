@@ -6,7 +6,7 @@ $id = $_GET['rule_id'];
 
 $conn = getDatabaseConnection();
 if ($id != NULL) {
-	$query = "SELECT row_to_json (aoe_rules) FROM aoe_rules WHERE id = ?";
+	$query = "SELECT row_to_json (aoe_rules) FROM aoe_rules WHERE rule_id = ?";
 	$stmt = $conn->prepare($query);
 	$stmt->bindParam(1, $id);
 } else {

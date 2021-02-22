@@ -1,46 +1,34 @@
-
 <div class="center-container shadow">
 
-<table class="table table-striped">
-<thead>
-    <tr>
-        <th scope="col" sortable ="position" (sort)="onSort($event)">Nr. ▾</th>
-        <th scope="col" sortable ="name" (sort)="onSort($event)">Rule Name ▾</th>
-        <th scope="col" sortable ="dat" (sort)="onSort($event)">  Creation Date ▾</th>
-        <th scope="col" sortable ="act" ><a routerLink="/edit"><button class="create-button"data-toggle="tooltip" title="Create new Rule"><i class="fas fa-folder-plus"> Create</i></button></a></th>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col" sortable="position" (sort)="onSort($event)">Nr. ▾</th>
+                <th scope="col" sortable="name" (sort)="onSort($event)">Rule Name ▾</th>
+                <th scope="col" sortable="dat" (sort)="onSort($event)"> Creation Date ▾</th>
+                <th scope="col" sortable="act"><a routerLink="/edit"><button class="create-button" data-toggle="tooltip"
+                            title="Create new Rule"><i class="fas fa-folder-plus"> Create</i></button></a></th>
+            </tr>
+        </thead>
+        <tbody>
 
+            <tr *ngFor="let element of rules; let i = index">
+                <th scope="row">{{ element.rule_id | number}}</th>
 
-        
-    </tr>
-</thead>
-<tbody>
+                <td>{{element.rule_name }}</td>
+                <!----<td>{{element.rule_initial_creation | number}}</td>--->
+                <td>{{element.rule_initial_creation | number}}</td>
+                <td>
+                    <!-- <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button>  -->
+                    <span style="font-size: 1.5rem;">
+                        <a routerLink="/edit"><button class="edit"><i class="far fa-edit" data-toggle="tooltip"
+                                    title="Edit"></i> </button></a>
+                    </span>
 
-        <tr *ngFor="let element of rules; let i = index">
-            <th scope="row">{{ element.position }}</th>
-           
-            <td>{{element.name }}</td> <td>{{element.dat| number}}</td>
-            <td>
-                <!-- <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button>  -->
-                <span style="font-size: 1.5rem;">
-                <a routerLink="/edit"><button class="edit"><i class="far fa-edit" data-toggle="tooltip" title="Edit"></i> </button></a>
-                </span>
-               
-                <app-popup21 ></app-popup21>
-                
-                
-                 <app-popup2></app-popup2>
+                    <app-popup21></app-popup21>
+                    <app-popup2></app-popup2>
 
- 
- 
-            </td>
-
-                
-        </tr>
-    
-</tbody>
-</table>
-<!-- <app-popup></app-popup> -->
-
-
-
-    
+                </td>
+            </tr>
+        </tbody>
+    </table>

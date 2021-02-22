@@ -17,4 +17,9 @@ export class RuleMetaData {
     // Rule data for calcuations as JSON string
     rule_data: String;
 
+    public getDateString() : String{
+        return "lol";
+    }
+
 }
+

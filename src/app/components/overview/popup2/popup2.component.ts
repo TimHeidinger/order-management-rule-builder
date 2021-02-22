@@ -40,8 +40,8 @@ export class Popup2Content {
       rules.forEach(x => {
 
         // Create newly cloned rule
-        let currentTimeMillis = +Date.now();
         x.rule_name = this.cloneRuleName != null ? this.cloneRuleName : ("Clone of " + x.rule_name + " (" + x.rule_id + ")");
+        let currentTimeMillis = +Date.now();
         x.rule_initial_creation = currentTimeMillis;
         x.rule_last_udpated = currentTimeMillis;
         x.rule_data = JSON.stringify(x.rule_data);

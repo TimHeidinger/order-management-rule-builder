@@ -16,7 +16,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
     
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click'); go()">Continue</button>
+      <button type="button" class="btn btn-primary" (click)="activeModal.close('Close click'); go()">Continue</button>
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
     </div>
   `

@@ -196,7 +196,7 @@ if(this.check()){
     exampleRuleMetaData.rule_name = this.ruleName;
     let currentTimeMillis = +Date.now();
     exampleRuleMetaData.rule_initial_creation = currentTimeMillis;
-    exampleRuleMetaData.rule_last_udpated = currentTimeMillis;
+    exampleRuleMetaData.rule_last_updated = currentTimeMillis;
     exampleRuleMetaData.rule_deleted = false;
     exampleRuleMetaData.rule_data = exampleShipmentRuleData.getJSON();
     this.databaseService.insert(exampleRuleMetaData).subscribe(rules => {

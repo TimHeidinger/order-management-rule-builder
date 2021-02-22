@@ -103,7 +103,7 @@ export class IfRowComponentComponent implements OnInit {
     
   }
 
-  reset(){
+  reset(i: number){
     this.construction = 'Shipment Request';
   
     this.relation = "Relation";
@@ -115,6 +115,24 @@ export class IfRowComponentComponent implements OnInit {
     else{
       this.attribute = "Carrier Method";
     }
+
+
+    
+    
+    
+   
+
+    if(i==1){
+
+      this.change3('');
+      this.change1('');
+    }
+
+    if(i==2){
+      this.change4('');
+      this.change2('');
+    }
+
     
   }
 

@@ -31,6 +31,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PopupComponent, PopupContent } from './components/overview/popup/popup.component';
 import { Popup2Component, Popup2Content } from './components/overview/popup2/popup2.component';
+import { PopupContentS,PopupComponentS, PopupContentS2 } from './components/rule-configuration/popup-save/popup-save.component';
+
 
 @NgModule({
   declarations: [
@@ -54,6 +56,10 @@ import { Popup2Component, Popup2Content } from './components/overview/popup2/pop
     PopupContent,
     Popup2Component,
     Popup2Content,
+    PopupContentS,
+    PopupComponentS,
+    PopupContentS2
+    
     
     
     

@@ -30,15 +30,15 @@ export class InnerMainContentComponent implements OnInit {
   public datamessage: string;
 
 
- public ruleName: String ='testname';
- public ifChoiceDelivery: String ='home';
- public ifChoiceCarrier: String ='express';
- public ifRelation1: String ='equal';
- public ifRelation2: String ='equal';
- public thenChoiceDue: string = "5";
- public thenChoiceDueTime: string = "1500";
- public thenChoiceUrgent: string = "3";
- public thenChoiceUrgentTime: string = "2000";
+ public ruleName: String ='';
+ public ifChoiceDelivery: String ='';
+ public ifChoiceCarrier: String ='';
+ public ifRelation1: String ='';
+ public ifRelation2: String ='';
+ public thenChoiceDue: string = "";
+ public thenChoiceDueTime: string = "";
+ public thenChoiceUrgent: string = "";
+ public thenChoiceUrgentTime: string = "";
 
   public update(event: EventPing): void {
     //console.log(event);
@@ -84,6 +84,21 @@ export class InnerMainContentComponent implements OnInit {
 
 
 }
+
+check():boolean{
+if(this.ruleName==""|| this.ifChoiceCarrier==""||this.ifChoiceDelivery=="" ||this.ifRelation1=="" ||this.ifRelation2==""||this.thenChoiceDue==""||
+this.thenChoiceDueTime==""||this.thenChoiceUrgent==""||this.thenChoiceUrgentTime==""){
+  console.log("false");
+  return false;}
+else {console.log("true");
+  return true;
+};
+  
+
+  
+}
+
+
 
  exportlog2() {
 

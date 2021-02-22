@@ -30,3 +30,19 @@ th:hover{
   color: #FE8C1D;
 }
 
+.create-button{
+  background-color: #5d6874; 
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.edit,.delete,.clone{
+  background-color: transparent; 
+  color:#5d6874;
+  
+  border: none;
+  
+}
+

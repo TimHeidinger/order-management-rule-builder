@@ -31,10 +31,11 @@ export class InnerMainContentComponent implements OnInit {
 
 
  public ruleName: String ='';
- public ifChoiceDelivery: String ='';
- public ifChoiceCarrier: String ='';
+ public ifChoice1: String ='';
+ public ifChoice2: String ='';
  public ifRelation1: String ='';
  public ifRelation2: String ='';
+ public ifConection: String ='';
  public thenChoiceDue: string = "";
  public thenChoiceDueTime: string = "";
  public thenChoiceUrgent: string = "";
@@ -44,11 +45,11 @@ export class InnerMainContentComponent implements OnInit {
     //console.log(event);
 
     if (event.label == "1") {
-      this.ifChoiceDelivery = event.object;
+      this.ifChoice1 = event.object;
     }
 
     if (event.label == "2") {
-      this.ifChoiceCarrier = event.object;
+      this.ifChoice2 = event.object;
     }
 
   if(event.label=="3"){
@@ -89,7 +90,7 @@ check():boolean{
  this.ruleName=this.datamessage;
 
 
-if(this.ruleName==""|| this.ifChoiceCarrier==""||this.ifChoiceDelivery=="" ||this.ifRelation1=="" ||this.ifRelation2==""||this.thenChoiceDue==""||
+if(this.ruleName==""|| this.ifChoice1==""||this.ifChoice2=="" ||this.ifRelation1=="" ||this.ifRelation2==""||this.thenChoiceDue==""||
 this.thenChoiceDueTime==""||this.thenChoiceUrgent==""||this.thenChoiceUrgentTime==""){
   
   return false;}
@@ -110,8 +111,8 @@ else {
 
 
   console.log(this.ruleName);
-  console.log(this.ifChoiceDelivery);
-  console.log(this.ifChoiceCarrier);
+  console.log(this.ifChoice1);
+  console.log(this.ifChoice2);
   console.log(this.ifRelation1);
   console.log(this.ifRelation2);
   console.log(this.thenChoiceDue);
@@ -126,8 +127,8 @@ else {
   var rule: any={};
   
   rule.ruleName = this.ruleName;
-  rule.ifChoicheDelivery=this.ifChoiceDelivery;
-  rule.ifChoicheCarrier=this.ifChoiceCarrier;
+  rule.ifChoicheDelivery=this.ifChoice1;
+  rule.ifChoicheCarrier=this.ifChoice2;
   rule.ifRelation1=this.ifRelation1;
   rule.ifRelation2=this.ifRelation2;
   //this.ifRelation
@@ -170,8 +171,8 @@ if(this.check()){
 
     // Insert rule into database
     let exampleShipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
-    exampleShipmentRuleData.ifChoiceCarrier = this.ifChoiceCarrier;
-    exampleShipmentRuleData.ifChoiceDelivery = this.ifChoiceDelivery;
+    exampleShipmentRuleData.ifChoiceCarrier = this.ifChoice1;
+    exampleShipmentRuleData.ifChoiceDelivery = this.ifChoice2;
     exampleShipmentRuleData.ifRelation1 = this.ifRelation1;
     exampleShipmentRuleData.ifRelation2 = this.ifRelation2;
     exampleShipmentRuleData.thenChoiceDue = this.thenChoiceDue;

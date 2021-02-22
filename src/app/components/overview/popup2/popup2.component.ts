@@ -1,12 +1,13 @@
 import { DatabaseBridge } from './../../../services/database.service';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ɵɵqueryRefresh } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-popup20',
   template: `
     <div class="modal-header">
-      <h4 class="modal-title" >Clone Rule</h4>
+      <h4  class="modal-title" >Clone Rule</h4>
       <button type="button" class="close" aria-label="" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -17,7 +18,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
     
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="activeModal.close('Close click'); addNewlyClonedRule()">Continue</button>
+      <button type="button" class="btn btn-primary" (click)="activeModal.close('Close click'); addNewlyClonedRule(); this.refresh();">Continue</button>
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
     </div>
   `
@@ -27,7 +28,16 @@ export class Popup2Content {
   @Input() existingRuleID;
   cloneRuleName: string;
 
-  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge) { }
+  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge, private _router: Router) { }
+
+
+  refresh(){
+    
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/']);
+
+}
 
   /**
    * Insert newly created rule to database
@@ -53,6 +63,9 @@ export class Popup2Content {
       });
     });
 
+
+    
+    
   }
 
 }

@@ -191,16 +191,13 @@ public picker: NgxMaterialTimepickerComponent;
   }
   
   
-  reset(){
+  reset(i: number){
     this.construction = 'Set';
     this.objekt = "Shipment Request";
     
     this.opt = "OrderPlacedTime";
     this.offset = "offset";
   
-    
-    
-
     if(this.text==2){
       this.date = "Urgent Date";
     }
@@ -208,6 +205,13 @@ public picker: NgxMaterialTimepickerComponent;
       this.date = "Due Date";
     }
     
+    if(i==1){
+      this.change21('');
+    }
+
+    if(i==2){
+      this.change21('');
+    }
   }
 
 }

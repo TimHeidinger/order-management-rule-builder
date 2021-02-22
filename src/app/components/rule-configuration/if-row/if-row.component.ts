@@ -116,12 +116,6 @@ export class IfRowComponentComponent implements OnInit {
       this.attribute = "Carrier Method";
     }
 
-
-    
-    
-    
-   
-
     if(i==1){
 
       this.change3('');

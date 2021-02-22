@@ -17,7 +17,7 @@ export class RuleMetaData {
     // Rule data for calcuations as JSON string
     rule_data: String;
 
-
+    // Frontend variables needed to display certain rule information 
     rule_initial_creation_human_date : String;
 
 }

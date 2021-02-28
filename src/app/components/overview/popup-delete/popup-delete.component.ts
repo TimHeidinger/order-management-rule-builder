@@ -21,42 +21,42 @@ import { Router } from '@angular/router';
     </div>
   `
 })
-export class PopupContent {
-  
+export class PopupDeleteContent {
+
   @Input() existingRuleID;
 
-  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge, private _router: Router) {}
+  constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge, private _router: Router) { }
 
-  refresh(){
-    
+  refresh() {
+
     setTimeout(() => {
       this._router.routeReuseStrategy.shouldReuseRoute = () => false;
       this._router.onSameUrlNavigation = 'reload';
       this._router.navigate(['/']);
     }, 2000);
 
-}
+  }
 
-  updateRule(){
+  updateRule() {
     console.log(this.existingRuleID);
 
-        // Fetch existing rule from database
-        this.databaseService.getRule(this.existingRuleID).subscribe(rules => {
+    // Fetch existing rule from database
+    this.databaseService.getRule(this.existingRuleID).subscribe(rules => {
 
-          rules.forEach(x => {
-    
-            // Edit rule, set it to deleted
-            let currentTimeMillis = +Date.now();
-            x.rule_last_updated = currentTimeMillis;
-            x.rule_deleted = true;
-            x.rule_data = JSON.stringify(x.rule_data);
-    
-            // Update existing rule in database
-            this.databaseService.update(x).subscribe(t => {
-            });;
-    
-          });
+      rules.forEach(x => {
+
+        // Edit rule, set it to deleted
+        let currentTimeMillis = +Date.now();
+        x.rule_last_updated = currentTimeMillis;
+        x.rule_deleted = true;
+        x.rule_data = JSON.stringify(x.rule_data);
+
+        // Update existing rule in database
+        this.databaseService.update(x).subscribe(t => {
         });
+
+      });
+    });
 
   }
 
@@ -64,15 +64,15 @@ export class PopupContent {
 
 @Component({
   selector: 'app-popup2',
-  templateUrl: './popup.component.html'
+  templateUrl: './popup-delete.component.html'
 })
-export class PopupComponent {
+export class PopupDeleteComponent {
   @Input() name2;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
   open() {
-    const modalRef = this.modalService.open(PopupContent);
+    const modalRef = this.modalService.open(PopupDeleteContent);
     modalRef.componentInstance.existingRuleID = this.name2;
   }
 }

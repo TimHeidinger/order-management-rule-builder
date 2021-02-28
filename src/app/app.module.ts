@@ -2,8 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RuleMetaData } from "./models/RuleMetaData";
 import { ShipmentRuleData } from './models/ShipmentRuleData';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
-
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,22 +16,14 @@ import { ThenRowComponentComponent } from './components/rule-configuration/then-
 import { IfConnectionComponentComponent } from './components/rule-configuration/if-connection/if-connection.component';
 import { ThenConnectionComponentComponent } from './components/rule-configuration/then-connection/then-connection.component';
 import { AddButtonComponentComponent } from './components/rule-configuration/add-button/add-button.component';
-
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { InnerOverviewComponent, NgbdSortableHeader } from './components/overview/inner-overview/inner-overview.component';
-//import { InnerOverviewRowComponent } from './components/overview/inner-overview-row/inner-overview-row.component';
-
-//import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-
-//import { NgbdSortableHeader} from './components/overview/inner-overview/inner-overview.component';
 import { CommonModule } from '@angular/common';
-import { PopupComponent, PopupContent } from './components/overview/popup/popup.component';
-import { Popup2Component, Popup2Content } from './components/overview/popup2/popup2.component';
-import { PopupContentS,PopupComponentS, PopupContentS2 } from './components/rule-configuration/popup-save/popup-save.component';
-
+import { PopupDeleteComponent, PopupDeleteContent } from './components/overview/popup-delete/popup-delete.component';
+import { PopupCloneComponent, PopupCloneContent } from './components/overview/popup-clone/popup-clone.component';
+import { PopupContentS, PopupComponentS, PopupContentS2 } from './components/rule-configuration/popup-save/popup-save.component';
 
 @NgModule({
   declarations: [
@@ -47,23 +38,14 @@ import { PopupContentS,PopupComponentS, PopupContentS2 } from './components/rule
     ThenConnectionComponentComponent,
     AddButtonComponentComponent,
     InnerOverviewComponent,
-
-    //InnerOverviewRowComponent,
-    
     NgbdSortableHeader,
-    
-    PopupComponent,
-    PopupContent,
-    Popup2Component,
-    Popup2Content,
+    PopupCloneComponent,
+    PopupCloneContent,
+    PopupDeleteComponent,
+    PopupDeleteContent,
     PopupContentS,
     PopupComponentS,
     PopupContentS2
-    
-    
-    
-    
-
   ],
   imports: [
     BrowserModule,
@@ -73,23 +55,13 @@ import { PopupContentS,PopupComponentS, PopupContentS2 } from './components/rule
     NgxMaterialTimepickerModule,
     AppRoutingModule,
     FormsModule,
-
     CommonModule,
-
     HttpClientModule,
-
-    //ReactiveFormsModule,
-    // RouterModule.forRoot([
-    //   { path: '', component: InnerOverviewComponent },
-    //  { path: 'edit/', component: InnerMainContentComponent },
-    // ]),
-
   ],
 
   exports: [InnerOverviewComponent],
   providers: [RuleMetaData, ShipmentRuleData],
   bootstrap: [AppComponent],
-  //InnerOverviewComponent
 
 })
 export class AppModule { }

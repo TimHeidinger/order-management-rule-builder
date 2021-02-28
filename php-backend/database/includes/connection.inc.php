@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Database connection
+ */
 header("Access-Control-Allow-Origin: *");
 function getDatabaseConnection()
 {

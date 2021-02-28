@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Fetch all rules, or specific rules by ID, from database
+ */
 require_once '../includes/connection.inc.php';
 
 $id = $_GET['rule_id'];

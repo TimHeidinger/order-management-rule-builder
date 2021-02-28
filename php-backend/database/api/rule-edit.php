@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Update exsisting rules in database
+*/
 require_once '../includes/connection.inc.php';
 
 $id = $_GET['rule_id'];

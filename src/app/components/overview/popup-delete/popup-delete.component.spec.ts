@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { InnerOverviewComponent } from './inner-overview.component';
+import { PopupDeleteComponent } from './popup-delete.component';
 
-describe('InnerOverviewComponent', () => {
-  let component: InnerOverviewComponent;
-  let fixture: ComponentFixture<InnerOverviewComponent>;
+describe('PopupDeleteComponent', () => {
+  let component: PopupDeleteComponent;
+  let fixture: ComponentFixture<PopupDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InnerOverviewComponent]
+      declarations: [PopupDeleteComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InnerOverviewComponent);
+    fixture = TestBed.createComponent(PopupDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,6 @@
 import { getLocaleDateFormat, getLocaleTimeFormat } from '@angular/common';
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { EventPing } from 'src/app/_interface/eventping';
+import { EventPing } from 'src/app/models/EventPing';
 
 @Component({
   selector: 'app-if-row',

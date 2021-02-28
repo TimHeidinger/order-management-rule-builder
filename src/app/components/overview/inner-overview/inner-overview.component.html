@@ -3,9 +3,9 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col" sortable="position" (sort)="onSort($event)">ID</th>
-                <th scope="col" sortable="name" (sort)="onSort($event)">Rule Name</th>
-                <th scope="col" sortable="dat" (sort)="onSort($event)"> Creation Date</th>
+                <th scope="col" sortable="position">ID</th>
+                <th scope="col" sortable="name">Rule Name</th>
+                <th scope="col" sortable="dat"> Creation Date</th>
                 <th scope="col" sortable="act"><a routerLink="/edit"><button class="create-button" data-toggle="tooltip"
                             title="Create new Rule"><i class="fas fa-folder-plus"> Create</i></button></a></th>
             </tr>
@@ -15,10 +15,9 @@
             <tr *ngFor="let element of rules; let i = index">
                 <th scope="row">{{ element.rule_id | number}}</th>
 
-                <td>{{element.rule_name}}</td>
-                <td>{{ element.rule_initial_creation_human_date}}</td>
+                <td>{{ element.rule_name }}</td>
+                <td>{{ element.rule_initial_creation_human_date }}</td>
                 <td>
-                    <!-- <button><img width="40" alt="AOE Logo" src="../../../favicon.ico"/></button>  -->
                     <span style="font-size: 1.5rem;">
                         <a routerLink="/edit"><button class="edit"><i class="far fa-edit" data-toggle="tooltip"
                                     title="Edit"></i> </button></a>
@@ -27,10 +26,6 @@
                     <app-popup21 [name2]=element.rule_id></app-popup21>
                     <app-popup2 [name2]=element.rule_id></app-popup2>
 
-                   
-                    <script>
-    
-                    </script>
                 </td>
             </tr>
         </tbody>

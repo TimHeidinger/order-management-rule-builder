@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Insert new data to database
+*/
 require_once '../includes/connection.inc.php';
 
 $rule_name = $_GET['rule_name'];

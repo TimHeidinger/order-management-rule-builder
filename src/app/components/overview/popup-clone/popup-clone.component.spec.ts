@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PopupCloneComponent } from './popup-clone.component';
 
-import { Popup2Component } from './popup2.component';
-
-describe('Popup2Component', () => {
-  let component: Popup2Component;
-  let fixture: ComponentFixture<Popup2Component>;
+describe('PopupCloneComponent', () => {
+  let component: PopupCloneComponent;
+  let fixture: ComponentFixture<PopupCloneComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Popup2Component ]
+      declarations: [PopupCloneComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Popup2Component);
+    fixture = TestBed.createComponent(PopupCloneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

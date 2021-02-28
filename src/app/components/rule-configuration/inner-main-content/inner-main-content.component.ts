@@ -1,7 +1,6 @@
 import { RuleMetaData } from './../../../models/RuleMetaData';
 import { Component, OnInit } from '@angular/core';
-import { Rule } from "../../../_interface/rule";
-import { EventPing } from "../../../_interface/eventping";
+import { EventPing } from "../../../models/EventPing";
 import { DatabaseBridge } from 'src/app/services/database.service';
 import { ShipmentRuleData } from 'src/app/models/ShipmentRuleData';
 

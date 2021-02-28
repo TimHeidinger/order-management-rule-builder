@@ -1,5 +1,5 @@
-import { DatabaseBridge } from './../../../services/database.service';
-import { Component, Input, ɵɵqueryRefresh } from '@angular/core';
+import { DatabaseBridge } from '../../../services/database.service';
+import { Component, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
@@ -23,22 +23,21 @@ import { Router } from '@angular/router';
     </div>
   `
 })
-export class Popup2Content {
+export class PopupCloneContent {
 
   @Input() existingRuleID;
   cloneRuleName: string;
 
   constructor(public activeModal: NgbActiveModal, private databaseService: DatabaseBridge, private _router: Router) { }
 
-
-  refresh(){
+  refresh() {
     setTimeout(() => {
-    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this._router.onSameUrlNavigation = 'reload';
-    this._router.navigate(['/']);
-  }, 2000);
+      this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this._router.onSameUrlNavigation = 'reload';
+      this._router.navigate(['/']);
+    }, 2000);
 
-}
+  }
 
   /**
    * Insert newly created rule to database
@@ -59,28 +58,25 @@ export class Popup2Content {
 
         // Insert newly created rule to database
         this.databaseService.insert(x).subscribe(t => {
-        });;
-
+        });
+        
       });
     });
 
-
-    
-    
   }
 
 }
 
 @Component({
   selector: 'app-popup21',
-  templateUrl: './popup2.component.html'
+  templateUrl: './popup-clone.component.html'
 })
-export class Popup2Component {
+export class PopupCloneComponent {
   @Input() name2;
   constructor(private modalService: NgbModal) { }
 
   open() {
-    const modalRef = this.modalService.open(Popup2Content);
+    const modalRef = this.modalService.open(PopupCloneContent);
     modalRef.componentInstance.existingRuleID = this.name2;
   }
 }

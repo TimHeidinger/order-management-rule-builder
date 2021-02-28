@@ -8,9 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'itp-regelkonfigurator';
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) { }
 }
-
-
-
-

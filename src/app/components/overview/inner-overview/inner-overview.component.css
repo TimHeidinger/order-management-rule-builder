@@ -1,7 +1,7 @@
 /*
  * inner white box container
  */
- .center-container {
+.center-container {
   display: flex;
   background-color: white;
   margin: 1.5em 3.5em 2.5em 3.5em;
@@ -9,7 +9,6 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 1em;
-
 }
 
 .center-container .shadow {
@@ -22,32 +21,33 @@
   margin: 2em;
 }
 
-th{
+th {
   font-size: 22px;
-  color: #6E7B87;
+  color: #6e7b87;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-th:hover{
-  color: #FE8C1D;
+th:hover {
+  color: #fe8c1d;
 }
 
-td{
+td {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.create-button{
-  background-color: #5d6874; 
+.create-button {
+  background-color: #5d6874;
   color: white;
   padding: 5px 20px;
   border: none;
   border-radius: 10px;
   font-size: 20px;
 }
-.edit,.delete,.clone{
-  background-color: transparent; 
-  color:#5d6874;
+.edit,
+.delete,
+.clone {
+  background-color: transparent;
+  color: #5d6874;
   border: none;
-  
 }

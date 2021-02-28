@@ -1,19 +1,8 @@
 import { RuleMetaData } from './../../../models/RuleMetaData';
-import { Component, Directive, EventEmitter, Input, Output, QueryList, ViewChildren, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
 import { DatabaseBridge } from 'src/app/services/database.service';
-import { ResourceLoader } from '@angular/compiler';
 import { Router } from '@angular/router';
 
-export type SortColumn = keyof RuleMetaData | '';
-export type SortDirection = 'asc' | 'desc' | '';
-
-const rotate: { [key: string]: SortDirection } = { 'asc': 'desc', 'desc': '', '': 'asc' };
-const compare = (v1: string | number, v2: string | number) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-
-export interface SortEvent {
-  column: SortColumn;
-  direction: SortDirection;
-}
 @Directive({
   selector: 'th[sortable]',
   host: {
@@ -23,15 +12,6 @@ export interface SortEvent {
   }
 })
 export class NgbdSortableHeader {
-
-  @Input() sortable: SortColumn = '';
-  @Input() direction: SortDirection = '';
-  @Output() sort = new EventEmitter<SortEvent>();
-
-  rotate() {
-    this.direction = rotate[this.direction];
-    this.sort.emit({ column: this.sortable, direction: this.direction });
-  }
 }
 
 @Component({
@@ -39,65 +19,32 @@ export class NgbdSortableHeader {
   templateUrl: './inner-overview.component.html',
   styleUrls: ['./inner-overview.component.css']
 })
-
 export class InnerOverviewComponent implements OnInit {
-  
+
   rules: RuleMetaData[];
-
-
-  print(t: any){
-    console.log(t);
-  }
-
-  refresh(){
-    
-      this._router.routeReuseStrategy.shouldReuseRoute = () => false;
-      this._router.onSameUrlNavigation = 'reload';
-      this._router.navigate(['/']);
-  
-  }
-
 
   constructor(private databaseService: DatabaseBridge, private _router: Router) { }
 
   ngOnInit(): void {
+
     // Fetch all available rules from database
     this.databaseService.getRules().subscribe(rules => {
 
       // Add and filter modified rules
       this.rules = rules.filter(x => !x.rule_deleted);
       this.rules.filter(x => !x.rule_deleted).forEach(x => {
-        let date : Date = new Date(x.rule_initial_creation);
-        let dateHumanString : String =  date.toDateString() + " at " + date.toLocaleTimeString();
+        let date: Date = new Date(x.rule_initial_creation);
+        let dateHumanString: String = date.toDateString() + " at " + date.toLocaleTimeString();
         x.rule_initial_creation_human_date = dateHumanString;
       });
 
     });
-
   }
 
-  @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-  onSort({ column, direction }: SortEvent) {
-
-    console.log("sdasd");
-
-    // resetting other headers
-    this.headers.forEach(header => {
-      if (header.sortable !== column) {
-        header.direction = '';
-      }
-    });
-
-    // sorting rules
-    if (direction === '' || column === '') {
-      this.rules = this.rules;
-    } else {
-      this.rules = [...this.rules].sort((a, b) => {
-        const res = compare(a.rule_name[column], b.rule_name[column]);
-        return direction === 'asc' ? res : -res;
-      });
-    }
-
+  refresh() {
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/']);
   }
 
 }

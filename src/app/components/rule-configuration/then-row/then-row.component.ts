@@ -2,7 +2,7 @@ import { getLocaleDateFormat, getLocaleTimeFormat, Time } from '@angular/common'
 import { Component, EventEmitter, Input, Output, NgModule, OnInit } from '@angular/core';
 //import * as EventEmitter from 'events';
 import { NgxMaterialTimepickerComponent, NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
-import { EventPing } from 'src/app/_interface/eventping';
+import { EventPing } from 'src/app/models/EventPing';
 import { isTemplateExpression } from 'typescript';
 
 @Component({

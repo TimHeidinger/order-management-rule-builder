@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {  PopupComponentS, PopupContentS } from './popup-save.component';
+import { PopupComponentS, PopupContentS } from './popup-save.component';
 
 describe('PopupSaveComponent', () => {
   let component: PopupComponentS;
@@ -8,9 +8,9 @@ describe('PopupSaveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PopupComponentS ]
+      declarations: [PopupComponentS]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

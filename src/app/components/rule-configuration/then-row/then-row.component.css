@@ -1,15 +1,18 @@
 /*
  * All drop dowm menus in then_row Styling
  */
-
-.Set-Button, .Shipment-Button, .Date-Button, .PlacedTime-Button, .Offset-Button{
+.Set-Button,
+.Shipment-Button,
+.Date-Button,
+.PlacedTime-Button,
+.Offset-Button {
   font-family: Arial;
   font-size: 18px;
-  color: #6E7B87;
+  color: #6e7b87;
   text-align: center;
 
-  background-color: #EEEEEE;
-  border-radius:20px;
+  background-color: #eeeeee;
+  border-radius: 20px;
   border: none;
 
   margin-top: 1.563em;
@@ -18,31 +21,32 @@
   height: 40px;
 }
 
-.Set-Button{
+.Set-Button {
   width: 140px;
 }
 
-.Shipment-Button, .PlacedTime-Button{
+.Shipment-Button,
+.PlacedTime-Button {
   width: 290px;
 }
 
-.Date-Button{
+.Date-Button {
   width: 250px;
 }
 
-.Offset-Button{
+.Offset-Button {
   width: 120px;
 }
 
 /*
  * Time picker Styling
  */
-.clock{
+.clock {
   font-family: Arial;
   font-size: 18px;
-  background-color: #EEEEEE;
-  color: #6E7B87;
-  border-radius:20px;
+  background-color: #eeeeee;
+  color: #6e7b87;
+  border-radius: 20px;
   border: none;
   margin-top: 1.563em;
   margin-left: 0.625em;
@@ -54,12 +58,12 @@
 /*
  * Delete Button Styling
  */
-.Delete-Button{
+.Delete-Button {
   font-family: Arial;
   font-size: 20px;
-  background-color: #B81005;
+  background-color: #b81005;
   color: white;
-  border-radius:100px;
+  border-radius: 100px;
   border: none;
   width: 40px;
   height: 40px;

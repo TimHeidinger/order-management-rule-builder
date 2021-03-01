@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InnerNavbarComponentComponent } from './inner-navbar.component';
 
 describe('InnerNavbarComponentComponent', () => {
@@ -8,9 +7,9 @@ describe('InnerNavbarComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InnerNavbarComponentComponent ]
+      declarations: [InnerNavbarComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

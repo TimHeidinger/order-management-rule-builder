@@ -8,9 +8,9 @@ describe('ThenConnectionComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThenConnectionComponentComponent ]
+      declarations: [ThenConnectionComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

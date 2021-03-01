@@ -16,16 +16,13 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
     
   </div>
 `,
-   styleUrls: ['./popup-save.component.css']
+  styleUrls: ['./popup-save.component.css']
 })
 
 export class PopupContentS {
   @Input() name;
-
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal) { }
 }
-
-
 
 @Component({
   selector: 'app-popup-save20',
@@ -43,15 +40,13 @@ export class PopupContentS {
     
   </div>
 `,
-   styleUrls: ['./popup-save.component.css']
+  styleUrls: ['./popup-save.component.css']
 })
 
 export class PopupContentS2 {
   @Input() name;
- 
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal) { }
 }
-
 
 @Component({
   selector: 'app-popup-save2',
@@ -59,13 +54,15 @@ export class PopupContentS2 {
 })
 export class PopupComponentS {
   @Input() boolean;
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
   open() {
-    
-    if(this.boolean){const modalRef = this.modalService.open(PopupContentS2); modalRef.componentInstance.name = '?';}
-    else {const modalRef = this.modalService.open(PopupContentS); modalRef.componentInstance.name = '?';};
-    
-    
+    if (this.boolean) {
+      const modalRef = this.modalService.open(PopupContentS2);
+      modalRef.componentInstance.name = '?';
+    } else {
+      const modalRef = this.modalService.open(PopupContentS);
+      modalRef.componentInstance.name = '?';
+    };
   }
 }

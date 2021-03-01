@@ -16,8 +16,6 @@ export class DropdownBasicComponent implements OnInit {
     console.log(this.optionNumber);
   }
 
-
-
   constructor() { }
 
   ngOnInit(): void {

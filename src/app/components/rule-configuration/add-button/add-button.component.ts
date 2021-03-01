@@ -7,14 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AddButtonComponentComponent implements OnInit {
 
-  // @Input() ;
   @Input()
   public text: string;
 
-
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

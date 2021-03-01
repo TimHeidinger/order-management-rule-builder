@@ -8,9 +8,9 @@ describe('IfConnectionComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IfConnectionComponentComponent ]
+      declarations: [IfConnectionComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

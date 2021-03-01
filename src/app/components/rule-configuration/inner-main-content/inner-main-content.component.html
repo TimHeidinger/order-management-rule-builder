@@ -1,69 +1,69 @@
 <!--Main block unter Block with Titel "rule configurator-->
-    <!--Block with rule name-->
-    <div class="rule-name-container">
-        <div class="rule-name-container-line">
-            <input type="text" [(ngModel)]="datamessage" name="message" placeholder="automation rule name" minlength=1 maxlength=30>
-        </div>
+<!--Block with rule name-->
+<div class="rule-name-container">
+    <div class="rule-name-container-line">
+        <input type="text" [(ngModel)]="datamessage" name="message" placeholder="automation rule name" minlength=1
+            maxlength=30>
     </div>
+</div>
 
-    <!--White block with main componenets-->
-    <div class="center-container shadow">
-        <div class="if-then-container">
+<!--White block with main componenets-->
+<div class="center-container shadow">
+    <div class="if-then-container">
 
-            <!--block with if-row-->
-            <div class="if-container">
-                <h2>IF</h2>
-                <div class="inner-if-container">
+        <!--block with if-row-->
+        <div class="if-container">
+            <h2>IF</h2>
+            <div class="inner-if-container">
 
-                    <!--First if_row-->
-                    <app-if-row [text]="text3" (ping)="update($event)"></app-if-row>
+                <!--First if_row-->
+                <app-if-row [text]="text3" (ping)="update($event)"></app-if-row>
 
-                    <!--Button connects two if_rows-->
-                    <app-if-connection></app-if-connection>
+                <!--Button connects two if_rows-->
+                <app-if-connection></app-if-connection>
 
-                    <!--Second if_row-->
-                    <app-if-row [text]="text4" (ping)="update($event)"></app-if-row>
+                <!--Second if_row-->
+                <app-if-row [text]="text4" (ping)="update($event)"></app-if-row>
 
-                    <!--Button for new if_row-->
-                    <app-add-button [text]="text1"></app-add-button>
-                </div>
-
+                <!--Button for new if_row-->
+                <app-add-button [text]="text1"></app-add-button>
             </div>
 
-            <hr>
+        </div>
 
-            <!--block with then-row-->
-            <div class="then-container">
-                <h2>THEN</h2>
-                <div class="inner-then-container">
+        <hr>
 
-                    <!--First then_row-->
-                    <app-then-row [text]="text5"  (ping)="update($event)"></app-then-row>
+        <!--block with then-row-->
+        <div class="then-container">
+            <h2>THEN</h2>
+            <div class="inner-then-container">
 
-                    <!--Button AND connects two then_rows-->
-                    <app-then-connection></app-then-connection>
+                <!--First then_row-->
+                <app-then-row [text]="text5" (ping)="update($event)"></app-then-row>
 
-                    <!--Second then_row-->
-                    <app-then-row [text]="text6"  (ping)="update($event)"></app-then-row>
+                <!--Button AND connects two then_rows-->
+                <app-then-connection></app-then-connection>
 
-                     <!--Button for new then_row-->
-                    <app-add-button [text]="text2"></app-add-button>
-                </div>
+                <!--Second then_row-->
+                <app-then-row [text]="text6" (ping)="update($event)"></app-then-row>
 
+                <!--Button for new then_row-->
+                <app-add-button [text]="text2"></app-add-button>
             </div>
 
-            <hr>
-
         </div>
 
-        <!--block with Button "cancel" and "save"-->
-        <div class="footer-button-container">
-            
-            <app-popup-save2 [boolean]=check() (click)=exportlog()></app-popup-save2>
-            <a routerLink="/"><button class="cancel-button">Cancel</button></a>
-           
-        </div>
+        <hr>
 
-    
     </div>
 
+    <!--block with Button "cancel" and "save"-->
+    <div class="footer-button-container">
+
+        <app-popup-save2 [boolean]=check() (click)=exportlog()></app-popup-save2>
+        <a routerLink="/"><button class="cancel-button">Cancel</button></a>
+
+    </div>
+
+
+</div>

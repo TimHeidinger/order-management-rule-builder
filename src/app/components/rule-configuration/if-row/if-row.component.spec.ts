@@ -8,9 +8,9 @@ describe('IfRowComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IfRowComponentComponent ]
+      declarations: [IfRowComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

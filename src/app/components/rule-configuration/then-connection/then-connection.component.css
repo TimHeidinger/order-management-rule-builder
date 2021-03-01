@@ -1,18 +1,18 @@
 /*
- * AND-Button Styling
+ * and-button styling
  */
-.AND-Button{
-    font-family: Arial;
-    font-size: 18px;
-    color: white;
+.and-button {
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
 
-    background-color: #6E7B87;
-    border-radius:20px;
-    border: none;
+  background-color: #6e7b87;
+  border-radius: 20px;
+  border: none;
 
-    width: 240px;
-    height: 40px;
-    
-    margin-left: 3.125em;
-    margin-top: 1.563em;
+  width: 240px;
+  height: 40px;
+
+  margin-left: 3.125em;
+  margin-top: 1.563em;
 }

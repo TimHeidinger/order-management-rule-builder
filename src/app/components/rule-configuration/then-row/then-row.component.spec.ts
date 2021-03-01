@@ -8,9 +8,9 @@ describe('ThenRowComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThenRowComponentComponent ]
+      declarations: [ThenRowComponentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

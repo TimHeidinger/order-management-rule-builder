@@ -8,9 +8,9 @@ describe('InnerMainContentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InnerMainContentComponent ]
+      declarations: [InnerMainContentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

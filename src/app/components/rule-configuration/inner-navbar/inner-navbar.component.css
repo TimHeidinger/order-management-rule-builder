@@ -1,7 +1,6 @@
 /*
  * Block with Title "Rule Configurator"
  */
-
 .inner-navbar {
   display: flex;
   justify-content: left;
@@ -19,7 +18,7 @@
 }
 
 /*
- * Titel Styling
+ * Titel styling
  */
 .inner-navbar .inner-navbar-line h2 {
   font-size: 35px;

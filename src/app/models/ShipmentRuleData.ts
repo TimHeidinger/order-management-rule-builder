@@ -11,10 +11,10 @@ export class ShipmentRuleData {
     ifRelation1: String;
     ifRelation2: String;
     ifConection: String;
-    thenChoiceDue: any; //TODO: Add type
-    thenChoiceDueTime: any; //TODO: Add type
-    thenChoiceUrgend: any; //TODO: Add type
-    thenCoiceUrgendTime: any; //TODO: Add type
+    thenChoiceDue: any;
+    thenChoiceDueTime: any;
+    thenChoiceUrgend: any;
+    thenCoiceUrgendTime: any;
 
     /**
      * @returns JSON string of this instance

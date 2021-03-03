@@ -35,6 +35,10 @@ export class InnerMainContentComponent implements OnInit {
   public thenChoiceUrgent: string = "";
   public thenChoiceUrgentTime: string = "";
 
+  /**
+   * Fetch user input from different input components
+   * @param event click event
+   */
   public update(event: EventPing): void {
 
     if (event.label == "1") {
@@ -75,6 +79,9 @@ export class InnerMainContentComponent implements OnInit {
 
   }
 
+  /**
+   * @returns true, if all fields are set, else false
+   */
   check(): boolean {
     this.ruleName = this.datamessage;
 
@@ -88,48 +95,36 @@ export class InnerMainContentComponent implements OnInit {
 
   }
 
+  /**
+   * Insert newly created rule to database
+   */
   exportlog() {
 
     if (this.check()) {
 
       // Get RuleName
       this.ruleName = this.datamessage;
-
-      // Fetch all available rules from database
-      this.databaseService.getRules().subscribe(rules => {
-        rules.forEach(x => {
-          console.log(x);
-        });
-      });
-
-      // Get specific rule from databaseb by ID
-      let exampleID: number = 1;
-      this.databaseService.getRule(exampleID).subscribe(rules => {
-        rules.forEach(x => {
-          console.log(x);
-        });
-      })
-
+      
       // Insert rule into database
-      let exampleShipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
-      exampleShipmentRuleData.ifChoice1 = this.ifChoice1;
-      exampleShipmentRuleData.ifChoice2 = this.ifChoice2;
-      exampleShipmentRuleData.ifRelation1 = this.ifRelation1;
-      exampleShipmentRuleData.ifRelation2 = this.ifRelation2;
-      exampleShipmentRuleData.ifConection = this.ifConection;
-      exampleShipmentRuleData.thenChoiceDue = this.thenChoiceDue;
-      exampleShipmentRuleData.thenChoiceDueTime = this.thenChoiceDueTime;
-      exampleShipmentRuleData.thenChoiceUrgend = this.thenChoiceUrgent;
-      exampleShipmentRuleData.thenCoiceUrgendTime = this.thenChoiceUrgentTime;
+      let shipmentRuleData: ShipmentRuleData = new ShipmentRuleData();
+      shipmentRuleData.ifChoice1 = this.ifChoice1;
+      shipmentRuleData.ifChoice2 = this.ifChoice2;
+      shipmentRuleData.ifRelation1 = this.ifRelation1;
+      shipmentRuleData.ifRelation2 = this.ifRelation2;
+      shipmentRuleData.ifConection = this.ifConection;
+      shipmentRuleData.thenChoiceDue = this.thenChoiceDue;
+      shipmentRuleData.thenChoiceDueTime = this.thenChoiceDueTime;
+      shipmentRuleData.thenChoiceUrgend = this.thenChoiceUrgent;
+      shipmentRuleData.thenCoiceUrgendTime = this.thenChoiceUrgentTime;
 
-      let exampleRuleMetaData: RuleMetaData = new RuleMetaData();
-      exampleRuleMetaData.rule_name = this.ruleName;
+      let ruleMetaData: RuleMetaData = new RuleMetaData();
+      ruleMetaData.rule_name = this.ruleName;
       let currentTimeMillis = +Date.now();
-      exampleRuleMetaData.rule_initial_creation = currentTimeMillis;
-      exampleRuleMetaData.rule_last_updated = currentTimeMillis;
-      exampleRuleMetaData.rule_deleted = false;
-      exampleRuleMetaData.rule_data = exampleShipmentRuleData.getJSON();
-      this.databaseService.insert(exampleRuleMetaData).subscribe(rules => {
+      ruleMetaData.rule_initial_creation = currentTimeMillis;
+      ruleMetaData.rule_last_updated = currentTimeMillis;
+      ruleMetaData.rule_deleted = false;
+      ruleMetaData.rule_data = shipmentRuleData.getJSON();
+      this.databaseService.insert(ruleMetaData).subscribe(rules => {
       });
 
     }

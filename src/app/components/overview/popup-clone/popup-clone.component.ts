@@ -36,7 +36,6 @@ export class PopupCloneContent {
       this._router.onSameUrlNavigation = 'reload';
       this._router.navigate(['/']);
     }, 2000);
-
   }
 
   /**

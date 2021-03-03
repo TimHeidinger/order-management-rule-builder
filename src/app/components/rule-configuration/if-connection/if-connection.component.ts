@@ -9,7 +9,6 @@ export class IfConnectionComponentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

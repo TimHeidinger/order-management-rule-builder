@@ -37,8 +37,10 @@ export class PopupDeleteContent {
 
   }
 
+  /**
+   * Update existing rule in database, mark as deleted
+   */
   updateRule() {
-    console.log(this.existingRuleID);
 
     // Fetch existing rule from database
     this.databaseService.getRule(this.existingRuleID).subscribe(rules => {

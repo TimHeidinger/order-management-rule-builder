@@ -41,6 +41,9 @@ export class InnerOverviewComponent implements OnInit {
     });
   }
 
+  /**
+   * Refresh overview page and table rule entries
+   */
   refresh() {
     this._router.routeReuseStrategy.shouldReuseRoute = () => false;
     this._router.onSameUrlNavigation = 'reload';
